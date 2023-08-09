@@ -10,5 +10,5 @@ def hello_there(request):
     print(request.build_absolute_uri()) #optional
     return render(
         request,
-        'main/home.html',
+        'main/landing.html',
     )

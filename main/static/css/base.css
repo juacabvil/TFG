@@ -1,0 +1,41 @@
+#sevidis-text {
+    color: #9A182D;
+    font-family: sans-serif;
+    font-size: 100px;
+    text-align: left;
+    font-weight: bold;
+    position: relative;
+    left: 1.75em;
+}
+
+#logo {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+#navbar-buttons{
+    margin-right: 2em;
+}
+
+.navbar-nav .nav-item {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-nav .nav-item .nav-link {
+    flex-grow: 1;
+    width: 200px;
+    text-align: center;
+    padding: 3rem 3.5rem;
+    color: #47525E;
+    background-color: #f8f9fa;
+    transition: background-color 0.3s;
+    font-size: 30px;
+}
+
+.navbar-nav .nav-item .nav-link:hover {
+    color: white;
+    background-color: #9A182D;
+}
+
