@@ -3,12 +3,19 @@ from django.shortcuts import render
 from django.http import HttpResponse   
 from django.shortcuts import render 
 
-def home(request):
-    return HttpResponse("Hello, Django!")
 
-def hello_there(request):
-    print(request.build_absolute_uri()) #optional
+def home(request):
     return render(
         request,
         'main/landing.html',
+    )
+def buscas(request):
+    return render(
+        request,
+        'main/buscas.html',
+    )
+def mapa(request):
+    return render(
+        request,
+        'main/mapa.html',
     )

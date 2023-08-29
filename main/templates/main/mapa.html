@@ -1,0 +1,130 @@
+{% extends 'base.html' %} 
+{% load static %}
+{% block body %} 
+
+<!-- Contenedor principal -->
+<div id="contenedor-principal">
+    <!-- Div izquierdo (33%) -->
+    <div id="div-izquierdo">
+        <p class="h2">Ruta accesible </p>
+        <br>
+        <p class="h2">Origen </p>
+
+        <div class="form-group mx-sm-3 mb-2">
+            <input type="text" class="form-control" id="origen" aria-describedby="emailHelp" placeholder="Ejemplo: Plaza de armas">
+        </div>
+
+        <br>
+        <p class="h2">Destino </p>
+
+        <div class="form-group mx-sm-3 mb-2">
+            <input type="text" class="form-control" id="destino" aria-describedby="emailHelp" placeholder="Ejemplo: Plaza de españa">
+        </div>
+
+        <div id="ruta-info">
+    
+        </div>
+
+        
+        <br>
+        
+        <label for="modo-transporte">Modo de transporte:</label>
+        <select id="modo-transporte">
+            <option value="foot">A pie</option>
+            <option value="bike">En bicicleta</option>
+            <option value="car">En coche</option>
+        </select>
+        
+        
+        
+
+    </div>
+
+    <!-- Div derecho (66%) -->
+    <div id="div-derecho">
+        <div id="map" style="height: 800px;"></div>
+    </div>
+</div>
+       
+
+
+<script>
+    var map = L.map('map').setView([37.3890924, -5.9844589], 13); // Ubicación en Sevilla
+
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
+
+    // Cancela la función de clic derecho predeterminada
+    map.on('contextmenu', function (e) {
+        e.preventDefault(); 
+        alert('Clic derecho en: ' + e.latlng.toString());
+    });
+
+    var startPoint = L.latLng(37.392169784504084, -6.003630160927381); 
+    var endPoint = L.latLng(37.3773292049943, -5.986954013988135); 
+
+    var control;
+
+    // Función para calcular la ruta según el modo de transporte seleccionado
+    function calcularRuta() {
+        var modoTransporte = document.getElementById('modo-transporte').value;
+
+        var enrutamientoOptions = {
+            waypoints: [startPoint, endPoint],
+            routeWhileDragging: true,
+            show: false,
+            language: 'es',
+            geocoder: L.Control.Geocoder.nominatim(),
+            profile: modoTransporte 
+        };
+
+        // Elimina la capa de ruta anterior si existe
+        if (control) {
+            map.removeControl(control);
+        }
+        // Calcula y muestra la nueva ruta
+        control = L.Routing.control(enrutamientoOptions);
+        
+        control.on('routeselected', function (e) {
+            var ruta = e.route;
+            var rutaInfoElement = document.getElementById('ruta-info');
+
+            if (rutaInfoElement) {
+                rutaInfoElement.innerHTML = 'Distancia: ' + ruta.summary.totalDistance + ' metros<br> Duración: ' + ruta.summary.totalTime + ' segundos';
+            }
+        });
+        
+        control.addTo(map);
+    }
+
+    document.getElementById('modo-transporte').addEventListener('change', calcularRuta);
+
+    calcularRuta();
+
+    var puntosDeInteres = [
+        {
+            latlng: [37.3913835, -5.9825882], // Coordenadas del POI
+            nombre: "Museo de Sevilla",
+            descripcion: "Un museo histórico en el centro de Sevilla.",
+            imagen: "imagen-museo.jpg", 
+            enlace: "<a href='https://www.ejemplo.com/museo'>Más información</a>"
+        },
+    ];
+    puntosDeInteres.forEach(function (poi) {
+        var marcador = L.marker(poi.latlng).addTo(map);
+
+        marcador.bindPopup(
+            "<h2>" + poi.nombre + "</h2>" +
+            "<p>" + poi.descripcion + "</p>" +
+            "<img src='" + poi.imagen + "' alt='Imagen del POI' width='100'>" +
+            "<p>" + poi.enlace + "</p>"
+        );
+
+        marcador.on('click', function () {
+            marcador.openPopup();
+        });
+    });
+</script>
+
+
+
+{% endblock %}

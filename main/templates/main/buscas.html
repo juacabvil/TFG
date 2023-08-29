@@ -1,0 +1,54 @@
+{% extends 'base_landing.html' %} 
+{% load static %}
+{% block body %} 
+
+<br>
+<p class="h2-centrado"> ¿Que buscas? </p>
+<br>
+<div class="container">
+    <div class="row no-gutters">
+        <!-- Columna 1 -->
+        <div class="col-md-6 d-flex flex-column align-items-center">
+            <br>
+            
+                <a href="/mapa"type="button" class="btn btn-danger custom-button">Ir al mapa</a>
+            
+            <br>
+            
+        </div>
+        <!-- Columna 2 -->
+        <div class="col-md-6 d-flex flex-column align-items-center">
+            <br>
+            
+                <button type="button" class="btn btn-danger custom-button">Información</button>
+            
+            <br>
+            
+        </div>
+
+    </div>
+</div>
+
+<script>
+    // Agrega un evento clic a los enlaces con la clase "scroll-link"
+    document.querySelectorAll('.scroll-link').forEach(function (element) {
+        element.addEventListener('click', function (e) {
+            e.preventDefault(); // Evita que se produzca el comportamiento predeterminado del enlace
+
+            const targetId = this.getAttribute('href').substring(1); // Obtiene el ID del objetivo
+
+            const targetElement = document.getElementById(targetId); // Obtiene el elemento de destino
+
+            if (targetElement) {
+                // Desplaza la página hasta el elemento de destino con una animación suave
+                window.scrollTo({
+                    top: targetElement.offsetTop,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+</script>
+
+
+{% endblock %}

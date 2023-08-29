@@ -2,8 +2,99 @@
 {% load static %}
 {% block body %} 
 
+<br>
+<p id="inicio" class="h2"> Bienvenido a SeviDis: Tu Compañero en la Movilidad </p>
+<br>
+<div class="container">
+    <div class="row no-gutters">
+        <!-- Columna 1 -->
+        <div class="col-md-6 d-flex flex-column align-items-center">
 
-<div>
-    <p> Hola</p>
+            <img id="logo" src="{% static '/images/simbolo.png'%}" alt="Logo" class="d-inline-block align-text-top"></img>
+            <br>
+            
+                <a href="/buscas"type="button" class="btn btn-danger custom-button">Ir al mapa</a>
+            
+            <br>
+            
+        </div>
+        <!-- Columna 2 -->
+        <div class="col-md-6 d-flex flex-column ">
+            <img id="mapa" src="{% static '/images/Raster.png'%}" alt="Logo" class="d-inline-block align-text-top"></img>
+        </div>
+
+        
+        <!-- Columna 3 -->
+        <div id="nuestra-mision" class="col-md-9 " >
+
+            <p class="h2"> Nuestra misión </p>
+
+            <p class="texto"> En SeviDis, nuestra misión es ayudar a personas con problemas de movilidad para que vivan vidas plenas y activas.
+                 Creemos que todos merecen acceder a oportunidades, lugares y experiencias sin obstáculos ni limitaciones. 
+                 Por eso, hemos desarrollado una plataforma integral que ofrece recursos, productos y servicios diseñados específicamente para abordar tus necesidades.
+            </p>
+            
+        </div>
+
+        <!-- Columna 4 -->
+        <div class="col-md-5 d-flex flex-column ">
+            <img src="{% static '/images/ilustracion_1.png'%}" alt="Logo" class="ilustracion"></img>
+        </div>
+
+        <!-- Columna 5 -->
+        <div class="col-md-7 d-flex flex-column align-items-center">
+
+            <p class="h2"> Recupera tu movilidad,
+                 Reclama tu vida: </p>
+
+            <p class="texto"> En SeviDis, creemos que tener problemas de movilidad no debería limitar tus aspiraciones ni frenar tu alegría de vivir. Estamos aquí para brindarte las herramientas y el apoyo que necesitas para superar obstáculos y alcanzar nuevas alturas. Juntos, construimos un camino hacia una vida más activa, independiente y gratificante.
+
+                ¡Únete a la comunidad de SeviDis hoy y comienza tu viaje hacia una mayor movilidad y libertad!
+                
+           </p>
+            
+        </div>
+
+        <!-- Columna 6 -->
+        <div id="sobre-nosotros" class="col-md-7 d-flex flex-column align-items-center">
+
+            <p class="h2"> Sobre nosotros:   </p>
+
+            <p class="texto"> Esta aplicación ha sido desarrollada por un estudiante de la Universidad de Sevilla como una iniciativa de proyecto de Trabajo de Final de Grado. 
+
+                Si tienes preguntas, ideas o simplemente quieres saber más sobre esta idea, no dudes en ponerte en contacto con nosotros. Estamos aquí para escucharte y colaborar contigo en nuestro objetivo común de mejorar la movilidad y la calidad de vida. ¡Juntos, podemos lograrlo!       
+            </p>
+            
+        </div>
+        <!-- Columna 7 -->
+        <div class="col-md-5 d-flex flex-column ">
+            <img src="{% static '/images/ilustracion_2.png'%}" alt="Logo" class="ilustracion"></img>
+        </div>
+
+        
+    </div>
 </div>
+
+<script>
+    // Agrega un evento clic a los enlaces con la clase "scroll-link"
+    document.querySelectorAll('.scroll-link').forEach(function (element) {
+        element.addEventListener('click', function (e) {
+            e.preventDefault(); // Evita que se produzca el comportamiento predeterminado del enlace
+
+            const targetId = this.getAttribute('href').substring(1); // Obtiene el ID del objetivo
+
+            const targetElement = document.getElementById(targetId); // Obtiene el elemento de destino
+
+            if (targetElement) {
+                // Desplaza la página hasta el elemento de destino con una animación suave
+                window.scrollTo({
+                    top: targetElement.offsetTop,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+</script>
+
+
 {% endblock %}
