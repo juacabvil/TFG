@@ -1,0 +1,1474 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>Estacionamientos reservados para personas con discapacidad en Sevilla ‎</name>
+    <description>Plazas de aparcamiento reservadas para personas con discapacidad en Sevilla</description>
+    <Style id="icon-155-normal">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/155-wheel_chair_accessible.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-155-highlight">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/155-wheel_chair_accessible.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1.1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-155">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-155-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-155-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-93-normal">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/93-parkinglot.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-93-highlight">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/93-parkinglot.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1.1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-93">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-93-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-93-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Folder>
+      <name>Capa sin nombre</name>
+      <Placemark>
+        <name>C/ Bécquer, 28</name>
+        <description><![CDATA[Una plaza en cordón.<br>Señalización horizontal: No.<br>Señalización vertical: 2 placas prohibitivas.<br>Vado o rebaje en acerado: No.]]></description>
+        <styleUrl>#icon-155</styleUrl>
+        <Point>
+          <coordinates>
+            -5.991502,37.402912,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>C/ Boteros, 38</name>
+        <description><![CDATA[Una plaza en batería.<br>Señalización horizontal: No.<br>Señalización vertical: 2 placas prohibitivas.<br>Vado o rebaje en acerado: No.]]></description>
+        <styleUrl>#icon-155</styleUrl>
+        <Point>
+          <coordinates>
+            -5.988907,37.390423,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>C/ Cabo Noval, junto a 3</name>
+        <description><![CDATA[Una plaza en cordón.<br>Señalización horizontal: No.<br>Señalización vertical: 2 placas prohibitivas.<br>Vado o rebaje en acerado: No.]]></description>
+        <styleUrl>#icon-155</styleUrl>
+        <Point>
+          <coordinates>
+            -5.993761,37.387554,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>C/ Calatrava, 7</name>
+        <description><![CDATA[Una plaza en cordón.<br>Señalización horizontal: No.<br>Señalización vertical: 2 placas prohibitivas.<br>Vado o rebaje en acerado: No (acerado con bordillo parcialmente a nivel con plaza).]]></description>
+        <styleUrl>#icon-155</styleUrl>
+        <Point>
+          <coordinates>
+            -5.994854,37.40276,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>C/ Calatrava, 12</name>
+        <description><![CDATA[Una plaza en cordón.<br>Señalización horizontal: No.<br>Señalización vertical: Placa prohibitiva.<br>Vado o rebaje en acerado: No.]]></description>
+        <styleUrl>#icon-155</styleUrl>
+        <Point>
+          <coordinates>
+            -5.994029,37.40152,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>C/ Calatrava, 20</name>
+        <description><![CDATA[Una plaza en cordón.<br>Señalización horizontal: No.<br>Señalización vertical: 2 placas prohibitivas.<br>Vado o rebaje en acerado: No.]]></description>
+        <styleUrl>#icon-155</styleUrl>
+        <Point>
+          <coordinates>
+            -5.994688,37.402458,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>C/ Cardenal Cervantes, 3</name>
+        <description><![CDATA[Una plaza en cordón.<br>Señalización horizontal: No.<br>Señalización vertical: 2 placas prohibitivas.<br>Vado o rebaje en acerado: No (bordillo 3-4 cm).]]></description>
+        <styleUrl>#icon-155</styleUrl>
+        <Point>
+          <coordinates>
+            -5.987333,37.391785,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>C/ Cardenal Cisneros (iglesia de San Vicente)</name>
+        <description><![CDATA[Una plaza en cordón.<br>Señalización horizontal: No.<br>Señalización vertical: 2 placas prohibitivas.<br>Vado o rebaje en acerado: No.]]></description>
+        <styleUrl>#icon-155</styleUrl>
+        <Point>
+          <coordinates>
+            -5.999275,37.394211,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>C/ Carlos Cañal, 28 ac.</name>
+        <description><![CDATA[Una plaza en cordón.<br>Señalización horizontal: No.<br>Señalización vertical: Placa prohibitiva.<br>Vado o rebaje en acerado: Acera prácticamente a nivel.]]></description>
+        <styleUrl>#icon-155</styleUrl>
+        <Point>
+          <coordinates>
+            -5.99748,37.389175,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>C/ Castelar, 11</name>
+        <description><![CDATA[Una plaza en cordón.<br>Señalización horizontal: No.<br>Señalización vertical: 2 placas prohibitivas.<br>Vado o rebaje en acerado: No.]]></description>
+        <styleUrl>#icon-155</styleUrl>
+        <Point>
+          <coordinates>
+            -5.997036,37.386967,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>C/ Cepeda, 2</name>
+        <description><![CDATA[Una plaza en cordón.<br>Señalización horizontal: No.<br>Señalización vertical: 2 placas prohibitivas.<br>Vado o rebaje en acerado: No.]]></description>
+        <styleUrl>#icon-155</styleUrl>
+        <Point>
+          <coordinates>
+            -6.000233,37.392963,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>C/ Churruca, 2</name>
+        <description><![CDATA[Una plaza en cordón.<br>Señalización horizontal: No.<br>Señalización vertical: 2 placas prohibitivas.<br>Vado o rebaje en acerado: Acerado a nivel sin bordillo. Pavimento no diferenciado delimitado por bolardos.]]></description>
+        <styleUrl>#icon-155</styleUrl>
+        <Point>
+          <coordinates>
+            -5.989703,37.396492,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>C/ Conde de Torrejón, 16</name>
+        <description><![CDATA[Una plaza en semibatería.<br>Señalización horizontal: No.<br>Señalización vertical: Pplaca prohibitiva.<br>Vado o rebaje en acerado: No.]]></description>
+        <styleUrl>#icon-155</styleUrl>
+        <Point>
+          <coordinates>
+            -5.992318,37.396973,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>C/ Cristo del Buen Fin, 5</name>
+        <description><![CDATA[Una plaza en semibatería.<br>Señalización horizontal: No.<br>Señalización vertical: 2 placas prohibitivas.<br>Vado o rebaje en acerado: No.]]></description>
+        <styleUrl>#icon-155</styleUrl>
+        <Point>
+          <coordinates>
+            -5.99919,37.398563,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>C/ Cruz Verde, 1-3</name>
+        <description><![CDATA[Una plaza en cordón.<br>Señalización horizontal: No.<br>Señalización vertical: 2 placas prohibitivas.<br>Vado o rebaje en acerado: Vado de esquina próximo.]]></description>
+        <styleUrl>#icon-155</styleUrl>
+        <Point>
+          <coordinates>
+            -5.991464,37.398048,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>C/ Dean Miranda (frente a núm 2)</name>
+        <description><![CDATA[Una plaza en cordón.<br>Señalización horizontal: No.<br>Señalización vertical: 2 placas prohibitivas.<br>Vado o rebaje en acerado: Acerado a nivel sin bordillo. Sin pavimento diferenciado.]]></description>
+        <styleUrl>#icon-155</styleUrl>
+        <Point>
+          <coordinates>
+            -5.992596,37.383919,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>C/ Dos de Mayo, 8</name>
+        <description><![CDATA[Una plaza en cordón.<br>Señalización horizontal: No.<br>Señalización vertical: 2 placas prohibitivas.<br>Vado o rebaje en acerado: No.]]></description>
+        <styleUrl>#icon-155</styleUrl>
+        <Point>
+          <coordinates>
+            -5.995421,37.385185,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>C/ Dos de Mayo, 30 - 32</name>
+        <description><![CDATA[Dos plazas en cordón.<br>Señalización horizontal: No.<br>Señalización vertical: 2 placas prohibitivas.<br>Vado o rebaje en acerado: No.]]></description>
+        <styleUrl>#icon-155</styleUrl>
+        <Point>
+          <coordinates>
+            -5.996794,37.384476,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>C/ Duque Cornejo, 54</name>
+        <description><![CDATA[Una plaza en cordón.<br>Señalización horizontal: No.<br>Señalización vertical: 2 placas prohibitivas.<br>Vado o rebaje en acerado: No.]]></description>
+        <styleUrl>#icon-155</styleUrl>
+        <Point>
+          <coordinates>
+            -5.985441,37.398624,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>C/ El Silencio, 6</name>
+        <description><![CDATA[Una plaza en cordón.<br>Señalización horizontal: No.<br>Señalización vertical: 2 placas prohibitivas.<br>Vado o rebaje en acerado: No.]]></description>
+        <styleUrl>#icon-155</styleUrl>
+        <Point>
+          <coordinates>
+            -5.996977,37.392509,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>C/ Esquivel, 18</name>
+        <description><![CDATA[Una plaza en cordón.<br>Señalización horizontal: No.<br>Señalización vertical: Placa prohibitiva.<br>Vado o rebaje en acerado: No.]]></description>
+        <styleUrl>#icon-155</styleUrl>
+        <Point>
+          <coordinates>
+            -5.993616,37.402832,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>C/ Faustino Álvarez, 41</name>
+        <description><![CDATA[Una plaza en cordón.<br>Señalización horizontal: No.<br>Señalización vertical: 2 placas prohibitivas.<br>Vado o rebaje en acerado: No.]]></description>
+        <styleUrl>#icon-155</styleUrl>
+        <Point>
+          <coordinates>
+            -5.992278,37.402035,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>C/ Federico Sánchez Bedoya, 10 ac.</name>
+        <description><![CDATA[Dos plazas en cordón.<br>Señalización horizontal: No.<br>Señalización vertical: 3 placas prohibitivas.<br>Vado o rebaje en acerado: No.]]></description>
+        <styleUrl>#icon-155</styleUrl>
+        <Point>
+          <coordinates>
+            -5.99469,37.386215,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>C/ Feria, 142</name>
+        <description><![CDATA[Una plaza en cordón.<br>Señalización horizontal: No.<br>Señalización vertical: 2 placas prohibitivas.<br>Vado o rebaje en acerado: No.]]></description>
+        <styleUrl>#icon-155</styleUrl>
+        <Point>
+          <coordinates>
+            -5.991769,37.401402,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>C/ Francisco Carrión Mejías, 10</name>
+        <description><![CDATA[Una plaza en cordón.<br>Señalización horizontal: No.<br>Señalización vertical: 2 placas prohibitivas.<br>Vado o rebaje en acerado: No.<br>Situada en puerta principal del Instituto Velázquez.]]></description>
+        <styleUrl>#icon-155</styleUrl>
+        <Point>
+          <coordinates>
+            -5.988029,37.39175,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>C/ Fray Isidoro de Sevilla, 37</name>
+        <description><![CDATA[Una plaza en cordón.<br>Señalización horizontal: No<br>Señalización vertical: 2 placas prohibitivas.<br>Vado o rebaje en acerado: En paso de peatones cercano.]]></description>
+        <styleUrl>#icon-155</styleUrl>
+        <Point>
+          <coordinates>
+            -5.98161,37.403618,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>C/ Fray Luis Sotelo, 7acc</name>
+        <description><![CDATA[Una plaza en cordón.<br>Señalización horizontal: No.<br>Señalización vertical: 2 placas prohibitivas.<br>Vado o rebaje en acerado: Paso de peatones en esquina.]]></description>
+        <styleUrl>#icon-155</styleUrl>
+        <Point>
+          <coordinates>
+            -5.990982,37.403065,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>C/ Gerona, 2</name>
+        <description><![CDATA[Una plaza en cordón.<br>Señalización horizontal: No.<br>Señalización vertical: 2 placas prohibitivas.<br>Vado o rebaje en acerado: No.]]></description>
+        <styleUrl>#icon-155</styleUrl>
+        <Point>
+          <coordinates>
+            -5.990207,37.394768,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>C/ Goles, 23</name>
+        <description><![CDATA[Una plaza en cordón.<br>Señalización horizontal: No.<br>Señalización vertical: Placa prohibitiva.<br>Vado o rebaje en acerado: Bordillo 2-3 cm. Vado de vehículos en garaje anexo.]]></description>
+        <styleUrl>#icon-155</styleUrl>
+        <Point>
+          <coordinates>
+            -6.001335,37.394787,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>C/ Harinas, 2-4</name>
+        <description><![CDATA[Una plaza en cordón.<br>Señalización horizontal: No.<br>Señalización vertical: 2 placas prohibitivas.<br>Vado o rebaje en acerado: Acerado a nivel sin bordillo. Pavimento diferenciado.]]></description>
+        <styleUrl>#icon-155</styleUrl>
+        <Point>
+          <coordinates>
+            -5.995534,37.38736,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>C/ Hiniesta, 41</name>
+        <description><![CDATA[Una plaza en batería.<br>Señalización horizontal: No.<br>Señalización vertical: Placa prohibitiva.<br>Vado o rebaje en acerado: Sin acerado diferenciado.]]></description>
+        <styleUrl>#icon-155</styleUrl>
+        <Point>
+          <coordinates>
+            -5.98721,37.397171,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>C/ Hiniesta, 47</name>
+        <description><![CDATA[Una plaza en batería.<br>Señalización horizontal: No.<br>Señalización vertical: 2 placas prohibitivas.<br>Vado o rebaje en acerado: Sin acerado diferenciado.]]></description>
+        <styleUrl>#icon-155</styleUrl>
+        <Point>
+          <coordinates>
+            -5.987152,37.397091,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>C/ Imagen, 8</name>
+        <description><![CDATA[Dos plazas en cordón.<br>Señalización horizontal: No.<br>Señalización vertical: 2 placas informativas.<br>Vado o rebaje en acerado: No.]]></description>
+        <styleUrl>#icon-155</styleUrl>
+        <Point>
+          <coordinates>
+            -5.990875,37.39257,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>C/ Imperial, 35</name>
+        <description><![CDATA[Una plaza en cordón.<br>Señalización horizontal: No.<br>Señalización vertical: Placa prohibitiva.<br>Vado o rebaje en acerado: No hay acerado; pavimento de adoquines.]]></description>
+        <styleUrl>#icon-155</styleUrl>
+        <Point>
+          <coordinates>
+            -5.986367,37.390167,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>C/ Jesús de las Tres Caídas, 4</name>
+        <description><![CDATA[Una plaza en cordón.<br>Señalización horizontal: No.<br>Señalización vertical: 2 placas prohibitivas.<br>Vado o rebaje en acerado: Acerado a nivel sin bordillo. Pavimento diferenciado.]]></description>
+        <styleUrl>#icon-155</styleUrl>
+        <Point>
+          <coordinates>
+            -5.990691,37.390003,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>C/ Jesús del Gran Poder, 108</name>
+        <description><![CDATA[Una plaza en cordón.<br>Señalización horizontal: No.<br>Señalización vertical: 2 placas prohibitivas.<br>Vado o rebaje en acerado: No.]]></description>
+        <styleUrl>#icon-155</styleUrl>
+        <Point>
+          <coordinates>
+            -5.994517,37.399422,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>C/ Levíes, 21</name>
+        <description><![CDATA[Una plaza en cordón.<br>Señalización horizontal: No.<br>Señalización vertical: 2 placas prohibitivas.<br>Vado o rebaje en acerado: Acerado a nivel sin bordillo. Sin pavimento diferenciado.]]></description>
+        <styleUrl>#icon-155</styleUrl>
+        <Point>
+          <coordinates>
+            -5.98749,37.388313,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>C/ Madre de Dios, 4</name>
+        <description><![CDATA[Una plaza en cordón.<br>Señalización horizontal: No.<br>Señalización vertical: Placa prohibitiva.<br>Vado o rebaje en acerado: No.]]></description>
+        <styleUrl>#icon-155</styleUrl>
+        <Point>
+          <coordinates>
+            -5.98937,37.387562,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>C/ Madre Dolores Márquez</name>
+        <description><![CDATA[Una plaza en semibatería.<br>Señalización horizontal: No.<br>Señalización vertical: Placa prohibitiva.<br>Vado o rebaje en acerado: No.]]></description>
+        <styleUrl>#icon-155</styleUrl>
+        <Point>
+          <coordinates>
+            -5.985194,37.399925,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>C/ Macarena, 38</name>
+        <description><![CDATA[Dos plazas en cordón.<br>Señalización horizontal: No.<br>Señalización vertical: 2 placas prohibitivas.<br>Vado o rebaje en acerado: No.]]></description>
+        <styleUrl>#icon-155</styleUrl>
+        <Point>
+          <coordinates>
+            -5.986658,37.401894,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>C/ Manuel Mateos, 21</name>
+        <description><![CDATA[Una plaza en cordón.<br>Señalización horizontal: No.<br>Señalización vertical: 2 placas prohibitivas.<br>Vado o rebaje en acerado: No.]]></description>
+        <styleUrl>#icon-155</styleUrl>
+        <Point>
+          <coordinates>
+            -5.982251,37.403267,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>C/ Maravillas, 19</name>
+        <description><![CDATA[Una plaza en cordón.<br>Señalización horizontal: No.<br>Señalización vertical: 2 placas prohibitivas.<br>Vado o rebaje en acerado: Acerado a nivel sin bordillo. Pavimento no diferenciado delimitado por bolardos.]]></description>
+        <styleUrl>#icon-155</styleUrl>
+        <Point>
+          <coordinates>
+            -5.988407,37.397148,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>C/ Marqués de Paradas, 37</name>
+        <description><![CDATA[Una plaza en cordón.<br>Señalización horizontal: No.<br>Señalización vertical: 2 placas prohibitivas.<br>Vado o rebaje en acerado: No.]]></description>
+        <styleUrl>#icon-155</styleUrl>
+        <Point>
+          <coordinates>
+            -6.001545,37.391418,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>C/ Marqués de Paradas (hospital)</name>
+        <description><![CDATA[Dos plazas en semibatería.<br>Señalización horizontal: No.<br>Señalización vertical: 2 placas prohibitivas.<br>Vado o rebaje en acerado: No.]]></description>
+        <styleUrl>#icon-155</styleUrl>
+        <Point>
+          <coordinates>
+            -6.001258,37.39053,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>C/ Matahacas, 8</name>
+        <description><![CDATA[Una plaza en cordón.<br>Señalización horizontal: No.<br>Señalización vertical: Placa prohibitiva.<br>Vado o rebaje en acerado: Vado de garaje anexo.]]></description>
+        <styleUrl>#icon-155</styleUrl>
+        <Point>
+          <coordinates>
+            -5.986133,37.394623,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>C/ Mateos Gago, 14</name>
+        <description><![CDATA[Una plaza en cordón.<br>Señalización horizontal: No.<br>Señalización vertical: 2 placas prohibitivas.<br>Vado o rebaje en acerado: Vado de peatones próxmo con pendiente elevada.]]></description>
+        <styleUrl>#icon-155</styleUrl>
+        <Point>
+          <coordinates>
+            -5.991006,37.386066,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>C/ Méndez Núñez, 18</name>
+        <description><![CDATA[Dos plazas en cordón.<br>Señalización horizontal: No.<br>Señalización vertical: 2 placas prohibitivas.<br>Vado o rebaje en acerado: Vado de peatones próximo con desnivel de aprox. 2 cm.]]></description>
+        <styleUrl>#icon-155</styleUrl>
+        <Point>
+          <coordinates>
+            -5.996444,37.389,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>C/ Miguel Cid, 55</name>
+        <description><![CDATA[Una plaza en cordón.<br>Señalización horizontal: No.<br>Señalización vertical: Placa prohibitiva.<br>Vado o rebaje en acerado: Acera a nivel sin bordillo.]]></description>
+        <styleUrl>#icon-155</styleUrl>
+        <Point>
+          <coordinates>
+            -5.998524,37.396576,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>C/ Morera</name>
+        <description><![CDATA[Dos plazas en semibatería.<br>Señalización horizontal: No.<br>Señalización vertical: 2 placas prohibitivas.<br>Vado o rebaje en acerado: No.]]></description>
+        <styleUrl>#icon-155</styleUrl>
+        <Point>
+          <coordinates>
+            -5.985741,37.400135,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>C/ Nicolás Antonio, 2</name>
+        <description><![CDATA[Una plaza en cordón.<br>Señalización horizontal: No.<br>Señalización vertical: 2 placas prohibitivas.<br>Vado o rebaje en acerado: Vado de cochera impracticable.]]></description>
+        <styleUrl>#icon-155</styleUrl>
+        <Point>
+          <coordinates>
+            -5.988225,37.385078,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>C/ Nicolás Antonio s/n</name>
+        <description><![CDATA[Una plaza en cordón.<br>Señalización horizontal: No.<br>Señalización vertical: 2 placas prohibitivas.<br>Vado o rebaje en acerado: Sin acerado. Pavimento en mal estado.]]></description>
+        <styleUrl>#icon-155</styleUrl>
+        <Point>
+          <coordinates>
+            -5.987523,37.384418,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>C/ Pacheco y Núñez del Prado, 52</name>
+        <description><![CDATA[Una plaza en semibatería.<br>Señalización horizontal: No.<br>Señalización vertical: Placa prohibitiva.<br>Vado o rebaje en acerado: No.]]></description>
+        <styleUrl>#icon-155</styleUrl>
+        <Point>
+          <coordinates>
+            -5.993012,37.403351,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>C/ Pascual de Gayangos, esquina C/ Goles</name>
+        <description><![CDATA[Una plaza en cordón.<br>Señalización horizontal: No.<br>Señalización vertical: 2 placas prohibitivas.<br>Vado o rebaje en acerado: Acera a nivel. Pavimento diferenciado.]]></description>
+        <styleUrl>#icon-155</styleUrl>
+        <Point>
+          <coordinates>
+            -6.000917,37.396637,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>C/ Pastor y Landero, 33</name>
+        <description><![CDATA[Una plaza en cordón.<br>Señalización horizontal: No.<br>Señalización vertical: 2 placas prohibitivas.<br>Vado o rebaje en acerado: No.]]></description>
+        <styleUrl>#icon-155</styleUrl>
+        <Point>
+          <coordinates>
+            -5.998988,37.38736,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>C/ Patricio Sáenz, 12</name>
+        <description><![CDATA[Una plaza en cordón.<br>Señalización horizontal: No.<br>Señalización vertical: 2 placas prohibitivas.<br>Vado o rebaje en acerado: No.]]></description>
+        <styleUrl>#icon-155</styleUrl>
+        <Point>
+          <coordinates>
+            -5.987664,37.401546,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>C/ Peral, 22</name>
+        <description><![CDATA[Una plaza en cordón.<br>Señalización horizontal: No.<br>Señalización vertical: 2 placas prohibitivas.<br>Vado o rebaje en acerado: No.]]></description>
+        <styleUrl>#icon-155</styleUrl>
+        <Point>
+          <coordinates>
+            -5.992996,37.401398,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>C/ Postigo del Carbón, 8</name>
+        <description><![CDATA[Una plaza en cordón.<br>Señalización horizontal: No.<br>Señalización vertical: Placa prohibitiva.<br>Vado o rebaje en acerado: No.]]></description>
+        <styleUrl>#icon-155</styleUrl>
+        <Point>
+          <coordinates>
+            -5.995974,37.383099,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>C/ Relator, 30</name>
+        <description><![CDATA[Una plaza en cordón.<br>Señalización horizontal: No.<br>Señalización vertical: 2 placas prohibitivas.<br>Vado o rebaje en acerado: No.]]></description>
+        <styleUrl>#icon-155</styleUrl>
+        <Point>
+          <coordinates>
+            -5.99102,37.400295,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>C/ San Laureano, s/n</name>
+        <description><![CDATA[Una plaza en cordón.<br>Señalización horizontal: No.<br>Señalización vertical: 2 placas prohibitivas.<br>Vado o rebaje en acerado: No.]]></description>
+        <styleUrl>#icon-155</styleUrl>
+        <Point>
+          <coordinates>
+            -6.002483,37.393211,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>C/ San Pablo, 9</name>
+        <description><![CDATA[Dos plazas en batería.<br>Señalización horizontal: No.<br>Señalización vertical: 2 placas prohibitivas.<br>Vado o rebaje en acerado: No.]]></description>
+        <styleUrl>#icon-155</styleUrl>
+        <Point>
+          <coordinates>
+            -5.997924,37.390305,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>C/ Santa Bárbara, 5</name>
+        <description><![CDATA[Una plaza en batería.<br>Señalización horizontal: No.<br>Señalización vertical: 2 placas prohibitivas.<br>Vado o rebaje en acerado: No.]]></description>
+        <styleUrl>#icon-155</styleUrl>
+        <Point>
+          <coordinates>
+            -5.994944,37.396191,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>C/ Santa Clara, 64</name>
+        <description><![CDATA[Una plaza en cordón.<br>Señalización horizontal: No.<br>Señalización vertical: 2 placas prohibitivas.<br>Vado o rebaje en acerado: No.]]></description>
+        <styleUrl>#icon-155</styleUrl>
+        <Point>
+          <coordinates>
+            -5.996282,37.400959,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>C/ Santa Lucía (iglesia)</name>
+        <description><![CDATA[Una plaza en cordón.<br>Señalización horizontal: No.<br>Señalización vertical: 2 placas prohibitivas.<br>Vado o rebaje en acerado: No.]]></description>
+        <styleUrl>#icon-155</styleUrl>
+        <Point>
+          <coordinates>
+            -5.983078,37.397484,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>C/ Santa María la Blanca, 3</name>
+        <description><![CDATA[Una plaza en cordón.<br>Señalización horizontal: No.<br>Señalización vertical: 2 placas prohibitivas.<br>Vado o rebaje en acerado: Vado a casa-palacio con bordillo de aprox. 3 cm.]]></description>
+        <styleUrl>#icon-155</styleUrl>
+        <Point>
+          <coordinates>
+            -5.989059,37.388329,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>C/ Santa María la Blanca, 13</name>
+        <description><![CDATA[Una plaza en cordón.<br>Señalización horizontal: No.<br>Señalización vertical: Placa prohibitiva.<br>Vado o rebaje en acerado: No.]]></description>
+        <styleUrl>#icon-155</styleUrl>
+        <Point>
+          <coordinates>
+            -5.987136,37.386223,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>C/ Santa María la Blanca, 36</name>
+        <description><![CDATA[Una plaza en cordón.<br>Señalización horizontal: No.<br>Señalización vertical: Placa prohibitiva.<br>Vado o rebaje en acerado: No.]]></description>
+        <styleUrl>#icon-155</styleUrl>
+        <Point>
+          <coordinates>
+            -5.98668,37.385788,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>C/ Santa Rufina, 8</name>
+        <description><![CDATA[Una plaza en cordón.<br>Señalización horizontal: No.<br>Señalización vertical: 2 placas prohibitivas.<br>Vado o rebaje en acerado: No.]]></description>
+        <styleUrl>#icon-155</styleUrl>
+        <Point>
+          <coordinates>
+            -5.992645,37.398895,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>C/ Santiago, 36-38</name>
+        <description><![CDATA[Una plaza en cordón.<br>Señalización horizontal: No.<br>Señalización vertical: Placa prohibitiva.<br>Vado o rebaje en acerado: No.]]></description>
+        <styleUrl>#icon-155</styleUrl>
+        <Point>
+          <coordinates>
+            -5.986603,37.391624,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>C/ Santo Tomás, 9</name>
+        <description><![CDATA[Una plaza en cordón.<br>Señalización horizontal: No.<br>Señalización vertical: Placa prohibitiva.<br>Vado o rebaje en acerado: No.]]></description>
+        <styleUrl>#icon-155</styleUrl>
+        <Point>
+          <coordinates>
+            -5.992575,37.384464,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>C/ San Andrés, 4</name>
+        <description><![CDATA[Una plaza en batería.<br>Señalización horizontal: No.<br>Señalización vertical: Placa prohibitiva.<br>Vado o rebaje en acerado: No.]]></description>
+        <styleUrl>#icon-155</styleUrl>
+        <Point>
+          <coordinates>
+            -5.994048,37.394592,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>C/ Señor de la Sentencia, 4</name>
+        <description><![CDATA[Una plaza en cordón.<br>Señalización horizontal: No.<br>Señalización vertical: Placa prohibitiva.<br>Vado o rebaje en acerado: No.]]></description>
+        <styleUrl>#icon-155</styleUrl>
+        <Point>
+          <coordinates>
+            -5.990953,37.400845,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>C/ Sol, 9</name>
+        <description><![CDATA[Una plaza en semibatería.<br>Señalización horizontal: No.<br>Señalización vertical: Placa prohibitiva.<br>Vado o rebaje en acerado: No.]]></description>
+        <styleUrl>#icon-155</styleUrl>
+        <Point>
+          <coordinates>
+            -5.987549,37.394089,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>C/ San Juan de Ribera, 10</name>
+        <description><![CDATA[Cuatro plazas en cordón.<br>Señalización horizontal: No.<br>Señalización vertical: 2 placas prohibitivas.<br>Vado o rebaje en acerado: No.]]></description>
+        <styleUrl>#icon-155</styleUrl>
+        <Point>
+          <coordinates>
+            -5.986935,37.404388,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>C/ San Blas, 21</name>
+        <description><![CDATA[Una plaza en cordón.<br>Señalización horizontal: No.<br>Señalización vertical: 2 placas prohibitivas.<br>Vado o rebaje en acerado: Acerado a nivel sin bordillo. Pavimento no diferenciado delimitado por bolardos.]]></description>
+        <styleUrl>#icon-155</styleUrl>
+        <Point>
+          <coordinates>
+            -5.989378,37.398525,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>C/ Temprado, 12</name>
+        <description><![CDATA[Una plaza en semibatería.<br>Señalización horizontal: No.<br>Señalización vertical: Placa prohibitiva.<br>Vado o rebaje en acerado: No.]]></description>
+        <styleUrl>#icon-155</styleUrl>
+        <Point>
+          <coordinates>
+            -5.995558,37.383369,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>C/ Tomás de Ibarra, 34</name>
+        <description><![CDATA[Dos plazas en cordón.<br>Señalización horizontal: No.<br>Señalización vertical: 2 placas prohibitivas.<br>Vado o rebaje en acerado: No.<br>Zona azul.]]></description>
+        <styleUrl>#icon-155</styleUrl>
+        <Point>
+          <coordinates>
+            -5.994443,37.383957,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>C/ Trajano, 2</name>
+        <description><![CDATA[Una plaza en cordón.<br>Señalización horizontal: No.<br>Señalización vertical: Placa prohibitiva.<br>Vado o rebaje en acerado: No.]]></description>
+        <styleUrl>#icon-155</styleUrl>
+        <Point>
+          <coordinates>
+            -5.99541,37.393566,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>C/ Velarde, 9</name>
+        <description><![CDATA[Una plaza en cordón.<br>Señalización horizontal: No.<br>Señalización vertical: 2 placas prohibitivas.<br>Vado o rebaje en acerado: No.]]></description>
+        <styleUrl>#icon-155</styleUrl>
+        <Point>
+          <coordinates>
+            -5.997835,37.384911,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>C/ Vergara, 5</name>
+        <description><![CDATA[Una plaza en semibatería.<br>Señalización horizontal: No.<br>Señalización vertical: 2 placas prohibitivas.<br>Vado o rebaje en acerado: Sin acerado diferenciado.]]></description>
+        <styleUrl>#icon-155</styleUrl>
+        <Point>
+          <coordinates>
+            -5.987538,37.39653,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>C/ Virgen de los Buenos Libros, 1</name>
+        <description><![CDATA[Una plaza en semibatería.<br>Señalización horizontal: No.<br>Señalización vertical: 2 placas prohibitivas.<br>Vado o rebaje en acerado: No.]]></description>
+        <styleUrl>#icon-155</styleUrl>
+        <Point>
+          <coordinates>
+            -5.998046,37.393974,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>C/ Zaragoza, 70</name>
+        <description><![CDATA[Una plaza en cordón.<br>Señalización horizontal: No.<br>Señalización vertical: Placa prohibitiva.<br>Vado o rebaje en acerado: Vado a calle peatonal junto a la plaza.]]></description>
+        <styleUrl>#icon-155</styleUrl>
+        <Point>
+          <coordinates>
+            -5.995764,37.387745,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Paseo de Cristóbal Colón, 9</name>
+        <description><![CDATA[Una plaza en cordón.<br>Señalización horizontal: No.<br>Señalización vertical: Placas prohibitiva.<br>Vado o rebaje en acerado: No.]]></description>
+        <styleUrl>#icon-155</styleUrl>
+        <Point>
+          <coordinates>
+            -5.999879,37.38625,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Paseo de Cristóbal Colón, s/n</name>
+        <description><![CDATA[Dos plazas en cordón.<br>Señalización horizontal: No.<br>Señalización vertical: 2 placas prohibitivas.<br>Vado o rebaje en acerado: No.]]></description>
+        <styleUrl>#icon-155</styleUrl>
+        <Point>
+          <coordinates>
+            -5.997999,37.384216,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Paseo de Cristóbal Colón, s/n</name>
+        <description><![CDATA[Una plaza en cordón.<br>Señalización horizontal: No.<br>Señalización vertical: 2 placas prohibitivas.<br>Vado o rebaje en acerado: No.<br>Frente a Teatro de la Maestranza]]></description>
+        <styleUrl>#icon-155</styleUrl>
+        <Point>
+          <coordinates>
+            -5.997328,37.383633,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Pza. del Cristo de Burgos, 10</name>
+        <description><![CDATA[Una plaza en cordón.<br>Señalización horizontal: No.<br>Señalización vertical: 2 placas prohibitivas.<br>Vado o rebaje en acerado: No.]]></description>
+        <styleUrl>#icon-155</styleUrl>
+        <Point>
+          <coordinates>
+            -5.989622,37.391987,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Pza. de la Gavidia, 10</name>
+        <description><![CDATA[Una plaza en batería.<br>Señalización horizontal: No.<br>Señalización vertical: 2 placas prohibitivas.<br>Vado o rebaje en acerado: No.]]></description>
+        <styleUrl>#icon-155</styleUrl>
+        <Point>
+          <coordinates>
+            -5.996625,37.394913,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Pza. de Jerónimo de Córdoba, 1</name>
+        <description><![CDATA[Una plaza en cordón.<br>Señalización horizontal: Sí (SIA).<br>Señalización vertical: Placas prohibitiva.<br>Vado o rebaje en acerado: Vado de peatones junto a la plaza.]]></description>
+        <styleUrl>#icon-155</styleUrl>
+        <Point>
+          <coordinates>
+            -5.987109,37.393036,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Pza. de Jerónimo de Córdoba, s/n</name>
+        <description><![CDATA[Una plaza en batería.<br>Señalización horizontal: Sí (SIA).<br>Señalización vertical: Placa prohibitiva.<br>Vado o rebaje en acerado: No.]]></description>
+        <styleUrl>#icon-155</styleUrl>
+        <Point>
+          <coordinates>
+            -5.986621,37.393253,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Pza. de Montesión, 2</name>
+        <description><![CDATA[Una plaza en cordón.<br>Señalización horizontal: No.<br>Señalización vertical: Placa prohibitiva.<br>Vado o rebaje en acerado: Acerado a nivel sin bordillo. Pavimento no diferenciado delimitado por bolardos.]]></description>
+        <styleUrl>#icon-155</styleUrl>
+        <Point>
+          <coordinates>
+            -5.991054,37.39674,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Pza. de San Gil, 6</name>
+        <description><![CDATA[Una plaza en cordón.<br>Señalización horizontal: No.<br>Señalización vertical: 2 placas prohibitivas.<br>Vado o rebaje en acerado: Acerado con bordillo de 2-3 cm.]]></description>
+        <styleUrl>#icon-155</styleUrl>
+        <Point>
+          <coordinates>
+            -5.989657,37.402092,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Pza. de San Martín, 3</name>
+        <description><![CDATA[Una plaza en semibatería.<br>Señalización horizontal: No.<br>Señalización vertical: Placa prohibitiva.<br>Vado o rebaje en acerado: Acerado a nivel sin bordillo delimitado por bolardos.]]></description>
+        <styleUrl>#icon-155</styleUrl>
+        <Point>
+          <coordinates>
+            -5.992907,37.396084,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Pza. del Museo, 5</name>
+        <description><![CDATA[Una plaza en cordón.<br>Señalización horizontal: No.<br>Señalización vertical: Placa prohibitiva.<br>Vado o rebaje en acerado: No.]]></description>
+        <styleUrl>#icon-155</styleUrl>
+        <Point>
+          <coordinates>
+            -5.999351,37.392609,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Pza. del Pelícano, 9</name>
+        <description><![CDATA[Una plaza en cordón.<br>Señalización horizontal: No.<br>Señalización vertical: 2 placas prohibitivas.<br>Vado o rebaje en acerado: No.]]></description>
+        <styleUrl>#icon-155</styleUrl>
+        <Point>
+          <coordinates>
+            -5.98411,37.397785,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Pza. del Pozo Santo, 1</name>
+        <description><![CDATA[Una plaza en semibatería.<br>Señalización horizontal: No.<br>Señalización vertical: Placa prohibitiva.<br>Vado o rebaje en acerado: Acerado a nivel sin bordillo y delimitado por bolardos.]]></description>
+        <styleUrl>#icon-155</styleUrl>
+        <Point>
+          <coordinates>
+            -5.992573,37.394527,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>C/ Bami, 5</name>
+        <description><![CDATA[Una plaza en cordón.<br>Señalización horizontal: No.<br>Señalización vertical: 2 placas prohibitivas.<br>Vado o rebaje en acerado: No.]]></description>
+        <styleUrl>#icon-155</styleUrl>
+        <Point>
+          <coordinates>
+            -5.979347,37.360611,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>C/ Castillo de Alcalá de Guadaíra, 7-9</name>
+        <description><![CDATA[Una plaza en semibatería.<br>Señalización horizontal: No.<br>Señalización vertical: 1 placa prohibido estacionar.<br>Vado o rebaje en acerado: No.]]></description>
+        <styleUrl>#icon-155</styleUrl>
+        <Point>
+          <coordinates>
+            -5.977319,37.360722,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>C/ Castillo de Alcalá de Guadaíra, 16</name>
+        <description><![CDATA[Una plaza en semibatería.<br>Señalización horizontal: No.<br>Señalización vertical: 2 placas prohibido estacionar.<br>Vado o rebaje en acerado: No.]]></description>
+        <styleUrl>#icon-155</styleUrl>
+        <Point>
+          <coordinates>
+            -5.97653,37.35915,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>C/ Castillo de Alcalá de Guadaíra, 19</name>
+        <description><![CDATA[Una plaza en semibatería. <br>Señalización horizontal: No.<br>Señalización vertical: 2 placas prohibido estacionar.<br>Vado o rebaje en acerado: No.]]></description>
+        <styleUrl>#icon-155</styleUrl>
+        <Point>
+          <coordinates>
+            -5.976766,37.359833,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>C/ Castillo de Alanís de la Sierra, s/n</name>
+        <description><![CDATA[Dos plazas en cordón.<br>Señalización horizontal: No.<br>Señalización vertical: 2 placas prohibido estacionar.<br>Vado o rebaje en acerado: No.]]></description>
+        <styleUrl>#icon-155</styleUrl>
+        <Point>
+          <coordinates>
+            -5.977432,37.360638,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>C/ Castillo de Aroche, 1</name>
+        <description><![CDATA[Dos plazas en cordón.<br>Señalización horizontal: No.<br>Señalización vertical: 2 placas prohibido estacionar.<br>Vado o rebaje en acerado: No.]]></description>
+        <styleUrl>#icon-155</styleUrl>
+        <Point>
+          <coordinates>
+            -5.980226,37.360271,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>C/ Castillo de Utrera, 9</name>
+        <description><![CDATA[Una plaza en cordón.<br>Señalización horizontal: No.<br>Señalización vertical: 1 placa prohibido estacionar.<br>Vado o rebaje en acerado: No.]]></description>
+        <styleUrl>#icon-155</styleUrl>
+        <Point>
+          <coordinates>
+            -5.978598,37.358921,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>C/ Castillo de Utrera, esquina C/ Castillo de Constantina</name>
+        <description><![CDATA[Una plaza en cordón.<br>Señalización horizontal: No<br>Señalización vertical. Una placa prohibido estacionar.<br>Vado o rebaje en acerado: Vado de peatones próximo.]]></description>
+        <styleUrl>#icon-155</styleUrl>
+        <Point>
+          <coordinates>
+            -5.977571,37.359344,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>C/ Torcuato Luca de Tena, esquina C/ Bami</name>
+        <description><![CDATA[Una plaza en semibatería.<br>Señalización horizontal: No.<br>Señalización vertical: 1 placa prohibido estacionar.<br>Vado o rebaje en acerado: No.]]></description>
+        <styleUrl>#icon-155</styleUrl>
+        <Point>
+          <coordinates>
+            -5.979363,37.361027,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>C/ Torcuato Luca de Tena, esquina C/ Castillo de A. de Guadaíra</name>
+        <description><![CDATA[Una plaza en semibatería.<br>Señalización horizontal: No.<br>Señalización vertical: 1 placa prohibido estacionar.<br>Vado o rebaje en acerado: No.]]></description>
+        <styleUrl>#icon-155</styleUrl>
+        <Point>
+          <coordinates>
+            -5.977995,37.361565,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>C/ Rafael Salgado, 1</name>
+        <description><![CDATA[Una plaza en cordón.<br>Señalización horizontal: No.<br>Señalización vertical: 2 placas prohibido estacionar.<br>Dimensiones: no definidas en la calzada.<br>Vado o rebaje en acerado: No.]]></description>
+        <styleUrl>#icon-155</styleUrl>
+        <Point>
+          <coordinates>
+            -5.979524,37.359303,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Aparcamiento</name>
+        <description><![CDATA[Aparcamiento público en superficie.<br>Sin plazas reservadas]]></description>
+        <styleUrl>#icon-93</styleUrl>
+        <Point>
+          <coordinates>
+            -5.975479,37.362995,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Aparcamiento Luis Rosales</name>
+        <description><![CDATA[Aparcamiento público en superficie. <br>Ninguna de las plazas está señalizada. No hay plazas reservadas.]]></description>
+        <styleUrl>#icon-93</styleUrl>
+        <Point>
+          <coordinates>
+            -5.976723,37.363983,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Bda. La Oliva. C/ Poeta Manuel Benítez Carrasco, 3. Cielo Azul, 2 (Colegio Zurbarán)</name>
+        <description><![CDATA[Una plaza en cordón.<br>Señalización horizontal: Sí<br>Señalización vertical: 1 placa informativa.<br>Vado o rebaje en acerado: Sí]]></description>
+        <styleUrl>#icon-155</styleUrl>
+        <Point>
+          <coordinates>
+            -5.969827,37.367088,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Bda. La Oliva, 53</name>
+        <description><![CDATA[Una plaza en batería.<br>Señalización horizontal: Sí.<br>Señalización vertical: Placa prohibitiva.<br>Vado o rebaje en acera: Sí.]]></description>
+        <styleUrl>#icon-155</styleUrl>
+        <Point>
+          <coordinates>
+            -5.970486,37.36618,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Bda. La Oliva, 29</name>
+        <description><![CDATA[Una plaza en batería.<br>Señalización horizontal: Sí.<br>Señalización vertical: 1 placa informativa.<br>Vado o rebaje en acera: No.]]></description>
+        <styleUrl>#icon-155</styleUrl>
+        <Point>
+          <coordinates>
+            -5.971073,37.36578,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Bda. La Oliva, 12 (trasera)</name>
+        <description><![CDATA[Una plaza en batería.<br>Señalización horizontal: No.<br>Señalización vertical: No.<br>Vado o rebaje en acera: No.]]></description>
+        <styleUrl>#icon-155</styleUrl>
+        <Point>
+          <coordinates>
+            -5.970825,37.365005,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Bda. La Oliva. C/ Poeta Manuel Benítez Carrasco, 1. Giralda Sur, 4</name>
+        <description><![CDATA[Una plaza en batería.<br>Señalización horizontal: No<br>Señalización vertical: 2 placas prohibitivas.<br>Vado o rebaje en acerado: Sí (pendiente excesiva).]]></description>
+        <styleUrl>#icon-155</styleUrl>
+        <Point>
+          <coordinates>
+            -5.968482,37.368145,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Bda. La Oliva. C/ Poeta Manuel Benítez Carrasco, 1. Giralda Sur, 4</name>
+        <description><![CDATA[Una plaza en batería.<br>Señalización horizontal: No<br>Señalización vertical: 1 placa prohibitiva.<br>Vado o rebaje en acerado: Sí]]></description>
+        <styleUrl>#icon-155</styleUrl>
+        <Point>
+          <coordinates>
+            -5.968317,37.368084,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Bda. La Oliva. C/ Poeta Manuel Benítez Carrasco, 1. Giralda Sur, 1 (trasera)</name>
+        <description><![CDATA[Una plaza en cordón.<br>Señalización horizontal: No.<br>Señalización vertical: 1 placa informativa.<br>Vado o rebaje en acerado: No.]]></description>
+        <styleUrl>#icon-155</styleUrl>
+        <Point>
+          <coordinates>
+            -5.969587,37.367737,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Bda. La Oliva, C/ Getsemaní, 2 (trasera)</name>
+        <description><![CDATA[Una plaza en batería.<br>Señalización horizontal: No<br>Señalización vertical: No.<br>Vado o rebaje en acerado: Sí]]></description>
+        <styleUrl>#icon-155</styleUrl>
+        <Point>
+          <coordinates>
+            -5.969511,37.363743,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Bda. La Oliva, 133</name>
+        <description><![CDATA[Una plaza en batería.<br>Señalización horizontal: No<br>Señalización vertical: No.<br>Vado o rebaje en acerado: Sí]]></description>
+        <styleUrl>#icon-155</styleUrl>
+        <Point>
+          <coordinates>
+            -5.969612,37.363956,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Bda. La Oliva, 113 (trasera)</name>
+        <description><![CDATA[Una plaza en cordón.<br>Señalización horizontal: No.<br>Señalización vertical: 2 placas prohibitivas.<br>Vado o rebaje en acerado: No.]]></description>
+        <styleUrl>#icon-155</styleUrl>
+        <Point>
+          <coordinates>
+            -5.971142,37.363628,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Bda. La Oliva. Ronda Ntra. Sra. de la Oliva, 2. Siderominero, 1</name>
+        <description><![CDATA[Una plaza en batería.<br>Señalización horizontal: No<br>Señalización vertical: 1 placa informativa.<br>Vado o rebaje en acerado: No]]></description>
+        <styleUrl>#icon-155</styleUrl>
+        <Point>
+          <coordinates>
+            -5.967147,37.367092,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Bda. La Oliva. Ronda Ntra. Sra. de la Oliva, 2. Siderominero, 8</name>
+        <description><![CDATA[Una plaza en batería.<br>Señalización horizontal: No<br>Señalización vertical: 1 placa informativa.<br>Vado o rebaje en acerado: Sí (en esquina)]]></description>
+        <styleUrl>#icon-155</styleUrl>
+        <Point>
+          <coordinates>
+            -5.967745,37.366398,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Bda. La Oliva. Ronda Ntra. Sra. de la Oliva, 8</name>
+        <description><![CDATA[Una plaza en cordón.<br>Señalización horizontal: No<br>Señalización vertical: 2 placas prohibitivas.<br>Vado o rebaje en acerado: No]]></description>
+        <styleUrl>#icon-155</styleUrl>
+        <Point>
+          <coordinates>
+            -5.96755,37.366207,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Bda. La Oliva, 142 (centro comercial)</name>
+        <description><![CDATA[Una plaza en batería.<br>Señalización horizontal: No<br>Señalización vertical: 1 placa informativa.<br>Vado o rebaje en acerado: Sí.]]></description>
+        <styleUrl>#icon-155</styleUrl>
+        <Point>
+          <coordinates>
+            -5.968535,37.366489,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Bda. La Oliva, 75 (trasera)</name>
+        <description><![CDATA[Una plaza en batería.<br>Señalización horizontal: No<br>Señalización vertical: 1 placa prohibitiva.<br>Vado o rebaje en acerado: No]]></description>
+        <styleUrl>#icon-155</styleUrl>
+        <Point>
+          <coordinates>
+            -5.969082,37.366085,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Bda. La Oliva. C/ Poeta Manuel Benítez Carrasco, 1. Giralda Sur, 7</name>
+        <description><![CDATA[Una plaza en bateria.<br>Señalización horizontal: No<br>Señalización vertical: 1 placa informativa.<br>Vado o rebaje en acerado: Sí]]></description>
+        <styleUrl>#icon-155</styleUrl>
+        <Point>
+          <coordinates>
+            -5.969079,37.368557,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Bda. La Oliva. C/ Poeta Manuel Benítez Carrasco, 1. Giralda Sur, 7</name>
+        <description><![CDATA[Una plaza en cordón.<br>Señalización horizontal: No<br>Señalización vertical: 1 placa informativa.<br>Vado o rebaje en acerado: No]]></description>
+        <styleUrl>#icon-155</styleUrl>
+        <Point>
+          <coordinates>
+            -5.9695,37.368317,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Avda. de Torneo - Centro Crecer</name>
+        <description><![CDATA[Dos plazas en cordón.<br>Señalización horizontal: No.<br>Señalización vertical: 2 placas prohibitivas.<br>Vado o rebaje en acerado: No.]]></description>
+        <styleUrl>#icon-155</styleUrl>
+        <Point>
+          <coordinates>
+            -5.997155,37.401836,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Avda. de Torneo - Juan Rabadán</name>
+        <description><![CDATA[Una plaza en cordón.<br>Señalización horizontal: No.<br>Señalización vertical: 2 placas prohibitivas.<br>Vado o rebaje en acerado: Vado de peatones próximo. Hay que invadir la calzada.]]></description>
+        <styleUrl>#icon-155</styleUrl>
+        <Point>
+          <coordinates>
+            -6.001113,37.397896,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Avda. Torneo - Pta. de S. Juan</name>
+        <description><![CDATA[Una plaza en cordón.<br>Señalización horizontal: No.<br>Señalización vertical: 2 placas prohibitivas.<br>Vado o rebaje en acerado: No.]]></description>
+        <styleUrl>#icon-155</styleUrl>
+        <Point>
+          <coordinates>
+            -5.998994,37.400375,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>C/ Aceituno, 6</name>
+        <description><![CDATA[Una plaza en cordón.<br>Señalización horizontal: No.<br>Señalización vertical: 2 placas prohibitivas.<br>Vado o rebaje en acerado: No.]]></description>
+        <styleUrl>#icon-155</styleUrl>
+        <Point>
+          <coordinates>
+            -5.982555,37.398006,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>C/ Adriano, 18</name>
+        <description><![CDATA[Una plaza en semibatería.<br>Señalización horizontal: No.<br>Señalización vertical: 2 placas prohibitivas.<br>Vado o rebaje en acerado: No.]]></description>
+        <styleUrl>#icon-155</styleUrl>
+        <Point>
+          <coordinates>
+            -5.997717,37.386623,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>C/ Adriano, 45</name>
+        <description><![CDATA[Una plaza en semibatería.<br>Señalización horizontal: No.<br>Señalización vertical: 2 placas prohibitivas.<br>Vado o rebaje en acerado: No.]]></description>
+        <styleUrl>#icon-155</styleUrl>
+        <Point>
+          <coordinates>
+            -5.999912,37.3866,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>C/ Alberto Durero, 1</name>
+        <description><![CDATA[Una plaza en batería.<br>Señalización horizontal: No.<br>Señalización vertical: 2 placas prohibitivas.<br>Vado o rebaje en acerado: Vado próximo para acceso local contiguo pero sin acceso directo desde la plaza.]]></description>
+        <styleUrl>#icon-155</styleUrl>
+        <Point>
+          <coordinates>
+            -5.981117,37.387993,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>C/ Alberto Durero, 6</name>
+        <description><![CDATA[Una plaza en batería.<br>Señalización horizontal: No.<br>Señalización vertical: 2 placas prohibitivas.<br>Vado o rebaje en acerado: No.]]></description>
+        <styleUrl>#icon-155</styleUrl>
+        <Point>
+          <coordinates>
+            -5.98109,37.388615,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>C/ Almansa, 20</name>
+        <description><![CDATA[Número indeterminado de plazas en cordón.<br>Señalización horizontal: No.<br>Señalización vertical: Placa prohibitiva.<br>Vado o rebaje en acerado: No.]]></description>
+        <styleUrl>#icon-155</styleUrl>
+        <Point>
+          <coordinates>
+            -6.000399,37.387772,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>C/ Amor de Dios, 27</name>
+        <description><![CDATA[Una plaza en cordón.<br>Señalización horizontal: No.<br>Señalización vertical: 2 placas prohibitivas.<br>Vado o rebaje en acerado: No.]]></description>
+        <styleUrl>#icon-155</styleUrl>
+        <Point>
+          <coordinates>
+            -5.994582,37.394962,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>C/ Antonia Sáenz, 3</name>
+        <description><![CDATA[Una plaza en cordón.<br>Señalización horizontal: No.<br>Señalización vertical: Placa prohibitiva.<br>Vado o rebaje en acerado: No.]]></description>
+        <styleUrl>#icon-155</styleUrl>
+        <Point>
+          <coordinates>
+            -5.986755,37.400764,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>C/ Argote de Molina, 30</name>
+        <description><![CDATA[Una plaza en cordón.<br>Señalización horizontal: No.<br>Señalización vertical: Placa prohibitiva.<br>Vado o rebaje en acerado: Acerado sin desnivel junto a la plaza.]]></description>
+        <styleUrl>#icon-155</styleUrl>
+        <Point>
+          <coordinates>
+            -5.992422,37.387512,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>C/ Arjona, 7-9</name>
+        <description><![CDATA[Una plaza en cordón.<br>Señalización horizontal: No.<br>Señalización vertical: Placa prohibitiva.<br>Vado o rebaje en acerado: No.]]></description>
+        <styleUrl>#icon-155</styleUrl>
+        <Point>
+          <coordinates>
+            -6.002269,37.389309,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>C/ Baños, 67</name>
+        <description><![CDATA[Una plaza en cordón.<br>Señalización horizontal: No.<br>Señalización vertical: 2 placas prohibitivas.<br>Vado o rebaje en acerado: No.]]></description>
+        <styleUrl>#icon-155</styleUrl>
+        <Point>
+          <coordinates>
+            -6.001958,37.395679,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>C/ Becas, 13</name>
+        <description><![CDATA[Una plaza en cordón.<br>Señalización horizontal: No.<br>Señalización vertical: 2 placas prohibitivas.<br>Vado o rebaje en acerado: No.]]></description>
+        <styleUrl>#icon-155</styleUrl>
+        <Point>
+          <coordinates>
+            -5.995145,37.400646,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>C/ Bécquer, 3</name>
+        <description><![CDATA[Una plaza en batería.<br>Señalización horizontal: No.<br>Señalización vertical: 2 placas prohibitivas.<br>Vado o rebaje en acerado: No.]]></description>
+        <styleUrl>#icon-155</styleUrl>
+        <Point>
+          <coordinates>
+            -5.989751,37.402794,0
+          </coordinates>
+        </Point>
+      </Placemark>
+    </Folder>
+  </Document>
+</kml>

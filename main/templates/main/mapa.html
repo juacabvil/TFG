@@ -1,13 +1,22 @@
 {% extends 'base.html' %} 
 {% load static %}
+{% load bootstrap_icons %}
+
+
 {% block body %} 
 
 <!-- Contenedor principal -->
+<button id="toggle-left-panel" class="btn btn-danger ">
+    Mostrar/ocultar panel izquierdo
+</button>
 <div id="contenedor-principal">
+    
     <!-- Div izquierdo (33%) -->
     <div id="div-izquierdo">
+        
         <p class="h2">Ruta accesible </p>
         <br>
+        <!-- Inputs de ruta en texto -->
         <p class="h2">Origen </p>
 
         <div class="form-group mx-sm-3 mb-2">
@@ -20,110 +29,454 @@
         <div class="form-group mx-sm-3 mb-2">
             <input type="text" class="form-control" id="destino" aria-describedby="emailHelp" placeholder="Ejemplo: Plaza de españa">
         </div>
-
-        <div id="ruta-info">
-    
-        </div>
-
-        
         <br>
-        
+        <!-- Modo transporte -->
         <label for="modo-transporte">Modo de transporte:</label>
-        <select id="modo-transporte">
+        <select class="form-select" id="modo-transporte">
             <option value="foot">A pie</option>
-            <option value="bike">En bicicleta</option>
+            <option value="bike">Sobre ruedas</option>
             <option value="car">En coche</option>
         </select>
-        
-        
-        
+        <br><br>
 
+        <button id="toggle-instructions" class="btn btn-danger">Mostrar Instrucciones</button> <button class="btn btn-danger" id="ubicacion-btn">Mostrar mi ubicación</button>
+
+        <div id="instructions-container" style="display: none;">
+            <div id="route-instructions">
+            </div>
+        </div>
+
+        <br>
+        <br>
+        <!-- Mostrar puntos checkbox -->
+        <input type="checkbox" id="mostrarPuntosDeInteres" checked>
+        <label for="mostrarPuntosDeInteres">Mostrar Puntos de Interés del Sistema </label><br>
+
+        <input type="checkbox" id="mostrarAparcamientos" checked>
+        <label for="mostrarAparcamientos">Mostrar Aparcamientos Para Minusválidos</label><br>
+        <br>
+    
     </div>
 
     <!-- Div derecho (66%) -->
     <div id="div-derecho">
         <div id="map" style="height: 800px;"></div>
+        
     </div>
 </div>
        
-
-
 <script>
-    var map = L.map('map').setView([37.3890924, -5.9844589], 13); // Ubicación en Sevilla
-
+// CARGA INICIAL MAPA   
+    // Mapa vacio
+    var map = L.map('map').setView([37.35880525026899, -5.987216388358271], 16);
+    var rutaLayer;
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
 
-    // Cancela la función de clic derecho predeterminada
-    map.on('contextmenu', function (e) {
-        e.preventDefault(); 
-        alert('Clic derecho en: ' + e.latlng.toString());
+    // Capas de puntos
+    var puntosDeInteresGroup = L.layerGroup().addTo(map);
+    var aparcamientosGroup = L.layerGroup().addTo(map);
+    // Carga de puntos de interes
+    var puntosDeInteres = {{ puntos_interes_para_mapa|safe }};
+    puntosDeInteres.forEach(function (punto) {
+        var latlng = [punto.latitud, punto.longitud];
+        var greenMarker = L.ExtraMarkers.icon({
+            icon: punto.icono,
+            markerColor: punto.color,
+            shape: 'circle'
+        });
+        console.log(punto.icono)
+        var marker = L.marker(latlng, { icon: greenMarker });
+        marker.bindPopup(punto.popup_content);
+        puntosDeInteresGroup.addLayer(marker); 
     });
 
-    var startPoint = L.latLng(37.392169784504084, -6.003630160927381); 
-    var endPoint = L.latLng(37.3773292049943, -5.986954013988135); 
+    // Carga de aparcamientos
+    var aparcamientos = {{ aparcamientos_para_mapa|safe }};
+    aparcamientos.forEach(function (aparcamiento) {
+        var latlng = [aparcamiento.latitud, aparcamiento.longitud];
+        var blueMarker = L.ExtraMarkers.icon({
+            icon: 'bi bi-p-square',
+            markerColor: 'blue',
+            shape: 'square'
+        });
+        var marker = L.marker(latlng, { icon: blueMarker });
+        marker.bindPopup(aparcamiento.popup_content);
+        aparcamientosGroup.addLayer(marker); 
+    });
 
-    var control;
+    
+    map.addLayer(puntosDeInteresGroup);
+    map.addLayer(aparcamientosGroup);
+    
 
-    // Función para calcular la ruta según el modo de transporte seleccionado
-    function calcularRuta() {
-        var modoTransporte = document.getElementById('modo-transporte').value;
+    // Actualizar la visibilidad de las capas según los checkboxes
+    function actualizarVisibilidadCapas() {
+        var mostrarPuntosDeInteres = document.getElementById('mostrarPuntosDeInteres').checked;
+        var mostrarAparcamientos = document.getElementById('mostrarAparcamientos').checked;
 
-        var enrutamientoOptions = {
-            waypoints: [startPoint, endPoint],
-            routeWhileDragging: true,
-            show: false,
-            language: 'es',
-            geocoder: L.Control.Geocoder.nominatim(),
-            profile: modoTransporte 
-        };
-
-        // Elimina la capa de ruta anterior si existe
-        if (control) {
-            map.removeControl(control);
+        if (mostrarPuntosDeInteres) {
+            map.addLayer(puntosDeInteresGroup);
+        } else {
+            map.removeLayer(puntosDeInteresGroup);
         }
-        // Calcula y muestra la nueva ruta
-        control = L.Routing.control(enrutamientoOptions);
-        
-        control.on('routeselected', function (e) {
-            var ruta = e.route;
-            var rutaInfoElement = document.getElementById('ruta-info');
 
-            if (rutaInfoElement) {
-                rutaInfoElement.innerHTML = 'Distancia: ' + ruta.summary.totalDistance + ' metros<br> Duración: ' + ruta.summary.totalTime + ' segundos';
+        if (mostrarAparcamientos) {
+            map.addLayer(aparcamientosGroup);
+        } else {
+            map.removeLayer(aparcamientosGroup);
+        }
+    }
+    document.getElementById('mostrarPuntosDeInteres').addEventListener('change', actualizarVisibilidadCapas);
+    document.getElementById('mostrarAparcamientos').addEventListener('change', actualizarVisibilidadCapas);
+// RUTA INICIAL    
+    // Marcadores ruta inicial
+    var startPoint = L.latLng(37.392169784504084, -6.003630160927381);
+    var endPoint = L.latLng(37.3773292049943, -5.986954013988135);
+    var startIcon = L.ExtraMarkers.icon({
+        icon: 'bi bi-flag-fill',
+        markerColor: 'black',
+        shape: 'circle'
+    });
+    var endIcon = L.ExtraMarkers.icon({
+        icon: 'bi bi-flag',
+        markerColor: 'black',
+        shape: 'circle'
+    });
+
+    var startMarker = L.marker(startPoint, { draggable: true, icon: startIcon }).addTo(map);
+    var endMarker = L.marker(endPoint, { draggable: true, icon: endIcon }).addTo(map);
+    startMarker.on('dragend', function (e) {
+        startPoint = e.target.getLatLng();
+        calcularRuta();
+    });
+    endMarker.on('dragend', function (e) {
+        endPoint = e.target.getLatLng();
+        calcularRuta();
+    });
+    startMarker.bindPopup('Origen');
+    endMarker.bindPopup('Destino');
+    var markersLayer = L.layerGroup([startMarker, endMarker]);
+    markersLayer.addTo(map);
+
+// LÓGICA CALCULAR RUTA    
+    // Calcular y representar ruta (funcion principal)
+    // 2 ramas, caso coche a menos de 500m de aparcamiento o cualquier otro.
+    var routeInstructions = document.getElementById('route-instructions');
+    calcularRuta();
+    function calcularRuta() {
+        if (rutaLayer) {
+            map.removeLayer(rutaLayer);
+        }
+        rutaLayer = L.layerGroup().addTo(map);
+        
+        var modoTransporte = document.getElementById('modo-transporte').value;
+        var origen = L.latLng(startPoint.lat, startPoint.lng);
+        var destino = L.latLng(endPoint.lat, endPoint.lng);
+        var aparcamientoCercano = encontrarAparcamientoCercano(destino);
+
+        if (modoTransporte === 'car' && aparcamientoCercano.distancia <= 500) {
+            
+            var origenAparcamiento = startPoint.lat + ',' + startPoint.lng;
+            var aparcamientoDestino = aparcamientoCercano.latitud + ',' + aparcamientoCercano.longitud;
+            // 1a ruta en coche
+            var apiUrlCar = 'https://graphhopper.com/api/1/route?key=a6168e30-6ff6-4d0a-a004-e960a9b145fc&' +
+                'point=' + origenAparcamiento +
+                '&point=' + aparcamientoDestino +
+                '&vehicle=car' +
+                '&locale=es' +
+                '&points_encoded=false'+
+                '&instructions=true'+
+                '&avoid=stairs';
+
+            axios.get(apiUrlCar)
+                .then(function (response) {
+                    var coordenadasCar = procesarRuta(response);
+                    dibujarRuta(coordenadasCar, rutaLayer);
+                    
+                    var ruta = response.data.paths[0];
+                    var distancia = ruta.distance.toFixed(2);
+                    var nivel = ruta.ascend.toFixed(2);
+                    var desnivel = ruta.descend.toFixed(2);
+                    var infoHTML = '<p> <strong>Distancia en coche:</strong> ' + distancia + ' metros</p>';
+
+                    var coordenadas = procesarRuta(response);
+                    dibujarRuta(coordenadas, rutaLayer);
+                    var instructions = ruta.instructions;
+                    var instructionsHTML = '<p class="h2">Ruta en coche:</p><ol>';
+                    for (var i = 0; i < instructions.length; i++) {
+                        var instruction = instructions[i];
+                        var distance = instruction.distance;
+                        var sign = instruction.sign;
+                        var text = instruction.text;
+                        instructionsHTML += '<li>' + text + ' (' + distance + ' metros)</li>';
+                    }
+                    instructionsHTML += '</ol>';
+                    routeInstructions.innerHTML = infoHTML + instructionsHTML;
+                    })
+                .catch(function (error) {
+                    console.error('Error en la solicitud de GraphHopper para coche: ' + error);
+                });
+            
+            // Segunda ruta 
+            var apiUrlWalk = 'https://graphhopper.com/api/1/route?key=a6168e30-6ff6-4d0a-a004-e960a9b145fc&' +
+                'point=' + aparcamientoDestino +
+                '&point=' + endPoint.lat+','+endPoint.lng +
+                '&vehicle=bike' +
+                '&locale=es' +
+                '&points_encoded=false'+
+                '&instructions=true'+
+                '&avoid=stairs';
+    
+            axios.get(apiUrlWalk)
+                .then(function (response) {
+                    var coordenadasWalk = procesarRuta(response);
+                    dibujarRutaRed(coordenadasWalk, rutaLayer);
+
+                    var ruta = response.data.paths[0];
+                    var distancia = ruta.distance.toFixed(2);
+                    var nivel = ruta.ascend.toFixed(2);
+                    var desnivel = ruta.descend.toFixed(2);
+                    var infoHTML = '<p> <strong>Distancia restante:</strong> ' + distancia + ' metros</p>';
+                    infoHTML += '<p><strong>Nivel de Ascenso:</strong> ' + nivel + ' metros</p>';
+                    infoHTML += '<p><strong>Desnivel:</strong> ' + desnivel + ' metros</p>';
+                    
+                    var instructions = ruta.instructions;
+                    var instructionsHTML = '<p class="h2">Direcciones a pie:</p><ol>';
+                    for (var i = 0; i < instructions.length; i++) {
+                        var instruction = instructions[i];
+                        var distance = instruction.distance;
+                        var sign = instruction.sign;
+                        var text = instruction.text;
+                        instructionsHTML += '<li>' + text + ' (' + distance + ' metros)</li>';
+                    }
+                    instructionsHTML += '</ol>';
+                    routeInstructions.innerHTML += infoHTML + instructionsHTML;
+                    })
+                .catch(function (error) {
+                    console.error('Error en la solicitud de GraphHopper para caminar: ' + error);
+                });
+        } else {
+            // Calcular una sola ruta de manera normal
+            var apiUrl = 'https://graphhopper.com/api/1/route?key=a6168e30-6ff6-4d0a-a004-e960a9b145fc&' +
+                'point=' + startPoint.lat+','+startPoint.lng +
+                '&point=' + endPoint.lat+','+endPoint.lng +
+                '&vehicle=' + modoTransporte +
+                '&locale=es' +
+                '&points_encoded=false'+
+                '&instructions=true'+
+                '&avoid=stairs';
+    
+            axios.get(apiUrl)
+                .then(function (response) {
+                    var ruta = response.data.paths[0];
+                    var distancia = ruta.distance.toFixed(2);
+                    var nivel = ruta.ascend.toFixed(2);
+                    var desnivel = ruta.descend.toFixed(2);
+                    var infoHTML = '<p> <strong>Distancia total:</strong> ' + distancia + ' metros</p>';
+                    infoHTML += '<p><strong>Nivel de Ascenso:</strong> ' + nivel + ' metros</p>';
+                    infoHTML += '<p><strong>Desnivel:</strong> ' + desnivel + ' metros</p>';
+                    
+                    var coordenadas = procesarRuta(response);
+                    dibujarRuta(coordenadas, rutaLayer);
+                    var instructions = ruta.instructions;
+                    var instructionsHTML = '<p class="h2">Direcciones:</p><ol>';
+                    for (var i = 0; i < instructions.length; i++) {
+                        var instruction = instructions[i];
+                        var distance = instruction.distance;
+                        var sign = instruction.sign;
+                        var text = instruction.text;
+                        instructionsHTML += '<li>' + text + ' (' + distance + ' metros)</li>';
+                    }
+                    instructionsHTML += '</ol>';
+                    routeInstructions.innerHTML = infoHTML + instructionsHTML;
+                    })
+                .catch(function (error) {
+                    console.error('Error en la solicitud de GraphHopper: ' + error);
+                });
+        }
+    }
+    
+    // Uso en calcular ruta, se busca el aparcamiento más cercano y la distancia del destino
+    function encontrarAparcamientoCercano(destino) {
+        var aparcamientos = {{ aparcamientos_para_mapa|safe }};
+        var distanciaMinima = Number.MAX_VALUE;
+        var aparcamientoCercano = null;
+    
+        aparcamientos.forEach(function (aparcamiento) {
+            // Verificar si las coordenadas del aparcamiento son válidas
+            if (aparcamiento.latitud !== undefined && aparcamiento.longitud !== undefined) {
+                var latlngAparcamiento = L.latLng(aparcamiento.latitud, aparcamiento.longitud);
+    
+                // Verificar si latlngAparcamiento es válido y no es null
+                if (latlngAparcamiento && latlngAparcamiento.lat !== undefined && latlngAparcamiento.lng !== undefined) {
+                    
+                    // Verificar que destino sea válido antes de calcular la distancia
+                    if (destino) {
+                        var distancia = latlngAparcamiento.distanceTo(destino);
+                        
+                        if (distancia < distanciaMinima) {
+                            distanciaMinima = distancia;
+                            aparcamientoCercano = aparcamiento;
+                        }
+                    }
+                }
             }
         });
-        
-        control.addTo(map);
+        aparcamientoCercano.distancia = distanciaMinima;
+        return aparcamientoCercano;
     }
-
-    document.getElementById('modo-transporte').addEventListener('change', calcularRuta);
-
-    calcularRuta();
-
-    var puntosDeInteres = [
-        {
-            latlng: [37.3913835, -5.9825882], // Coordenadas del POI
-            nombre: "Museo de Sevilla",
-            descripcion: "Un museo histórico en el centro de Sevilla.",
-            imagen: "imagen-museo.jpg", 
-            enlace: "<a href='https://www.ejemplo.com/museo'>Más información</a>"
-        },
-    ];
-    puntosDeInteres.forEach(function (poi) {
-        var marcador = L.marker(poi.latlng).addTo(map);
-
-        marcador.bindPopup(
-            "<h2>" + poi.nombre + "</h2>" +
-            "<p>" + poi.descripcion + "</p>" +
-            "<img src='" + poi.imagen + "' alt='Imagen del POI' width='100'>" +
-            "<p>" + poi.enlace + "</p>"
-        );
-
-        marcador.on('click', function () {
-            marcador.openPopup();
-        });
+    // Parseo ruta para poder representarla en Leaflet
+    function procesarRuta(response) {
+        var ruta = response.data.paths[0];
+        var coordenadasRuta = ruta.points.coordinates;
+        var coordenadas = [];
+        for (var i = 0; i < coordenadasRuta.length; i++) {
+            var latitud = coordenadasRuta[i][1];
+            var longitud = coordenadasRuta[i][0];
+            coordenadas.push(L.latLng(latitud, longitud));
+        }
+        return coordenadas;
+    }
+    function dibujarRuta(coordenadas, layer) {
+        var rutaPolyline = L.polyline(coordenadas, { color: 'blue' }).addTo(layer);
+        map.fitBounds(rutaPolyline.getBounds());
+    }
+    function dibujarRutaRed(coordenadas, layer) {
+        var rutaPolyline = L.polyline(coordenadas, { color: 'red' }).addTo(layer);
+        map.fitBounds(rutaPolyline.getBounds());
+    }
+    
+    function eliminarRutaAntigua(layer) {
+        layer.clearLayers();
+    }    
+    // Cancelar click derecho en el mapa y dar opciones personalizadas
+    map.on('contextmenu', function (e) {
+        var contextMenu = L.popup()
+            .setLatLng(e.latlng)
+            .setContent('<h3>Seleccione:</h3>' +
+                '<button class="btn btn-danger btn-sm" onclick="setInicio(' + e.latlng.lat + ',' + e.latlng.lng + ')">Establecer inicio</button> </br>' +
+                '<button class="btn btn-secondary btn-sm" onclick="setFinal(' + e.latlng.lat + ',' + e.latlng.lng + ')">Establecer final</button> </br></br>' +
+                '<button class="btn btn-primary btn-sm" onclick="buscarEnRadio(' + e.latlng.lat + ',' + e.latlng.lng + ')">Buscar en 100m</button>')
+            .openOn(map);
     });
-</script>
+    // Mover marcador de inicio y recalcular ruta
+    function setInicio(lat, lng) {
+
+        startPoint = L.latLng(lat, lng);
+        startMarker.setLatLng(startPoint);
+        eliminarRutaAntigua(rutaLayer);
+        calcularRuta();
+        map.closePopup();
+    }
+    // Mover marcador de final y recalcular ruta
+    function setFinal(lat, lng) {
+        endPoint = L.latLng(lat, lng);
+        endMarker.setLatLng(endPoint);
+        eliminarRutaAntigua(rutaLayer);
+        calcularRuta();
+        map.closePopup();
+    }
+// BUSCAR EN RADIO    
+    // Buscar nodos en radio cercano
+    var circle;
+    var markers = [];
+    function buscarEnRadio(lat, lng) {
+        if (circle) {
+            map.removeLayer(circle);
+        }
+        markers.forEach(function (marker) {
+            map.removeLayer(marker);
+        });
+        markers = [];
+        var radius = 100;
+        circle = L.circle([lat, lng], {
+            color: 'blue',
+            fillColor: 'blue',
+            fillOpacity: 0.2,
+            radius: radius
+        }).addTo(map);
+        var overpassQuery = `
+            [out:json];
+            node(around:${radius},${lat},${lng})["amenity"];
+            out;
+        `;
+        axios.post('https://overpass-api.de/api/interpreter', overpassQuery)
+            .then(function (response) {
+                var data = response.data;
+                var nodes = data.elements;
+                nodes.forEach(function (node) {
+                    var nodeLat = node.lat;
+                    var nodeLng = node.lon;
+                    var marker = L.marker([nodeLat, nodeLng]).addTo(map);
+                    var popupContent = '<h3> ' + node.tags.amenity + '</h3>';
+                    for (var key in node.tags) {
+                        popupContent += '<p><strong>' + key + ':</strong> ' + node.tags[key] + '</p>';
+                    }
+                    marker.bindPopup(popupContent);
+                    markers.push(marker);
+                });
+            })
+            .catch(function (error) {
+                console.error('Error en la consulta Overpass Turbo: ' + error);
+            });
+    }
+// UBICACION
+    // Obtener ubicacion del usuario y representarla
+    var ubicacionBtn = document.getElementById('ubicacion-btn');
+    ubicacionBtn.addEventListener('click', function () {
+        if ("geolocation" in navigator) {
+            navigator.geolocation.getCurrentPosition(function (position) {
+                var userLat = position.coords.latitude;
+                var userLng = position.coords.longitude;
+                var customIcon = L.ExtraMarkers.icon({
+                    icon: 'bi bi-person-arms-up',
+                    markerColor: 'purple',
+                    shape: 'star'
+                });
+                var userLocationMarker = L.marker([userLat, userLng], {icon:customIcon}).addTo(map);
+                userLocationMarker.bindPopup("Tu ubicación actual").openPopup();
+                map.setView([userLat, userLng], 16);
+            }, function (error) {
+                console.error('Error al obtener la ubicación: ' + error.message);
+            });
+        } else {
+            alert("Tu navegador no admite la geolocalización.");
+        }
+    });
+    document.getElementById('modo-transporte').addEventListener('change', function () {
+        routeInstructions.innerHTML = '';
+        calcularRuta();
+    });
+// MOSTRAR/OCULTAR
+    // Mostrar/ocultar instrucciones de ruta
+    function toggleInstructions() {
+        var instructionsContainer = document.getElementById('instructions-container');
+        if (instructionsContainer.style.display === 'none') {
+            instructionsContainer.style.display = 'block';
+        } else {
+            instructionsContainer.style.display = 'none';
+        }
+    }
+    
+    var toggleInstructionsButton = document.getElementById('toggle-instructions');
+    toggleInstructionsButton.addEventListener('click', toggleInstructions);
+
+    // Mostrar/ocultar instrucciones de ruta
+    function toggleLeftPanel() {
+        var leftPanel = document.getElementById('div-izquierdo');
+        var rightPanel = document.getElementById('map');
+        if (leftPanel.style.display === 'none') {
+            leftPanel.style.display = 'block';
+        } else {
+            leftPanel.style.display = 'none';
+            leftPanel.style.display = 'height: 1800px';
+        }
+    }
+    var toggleLeftPanelButton = document.getElementById('toggle-left-panel');
+    toggleLeftPanelButton.addEventListener('click', toggleLeftPanel);
+
+
+</script>    
 
 
 
