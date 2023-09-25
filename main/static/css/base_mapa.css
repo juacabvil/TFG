@@ -1,12 +1,38 @@
 /* Navbar style */
 @media (max-width: 991.98px) {
     .navbar-header {
-      flex-direction: column; 
       align-items: center; 
     }
-  
+
+    .h2 {
+        color: #47525E;
+        font-size: 1.5em; 
+        line-height: 1.2; 
+        font-weight: 700;
+        margin-right: 2em;
+        width: 80%; 
+    }
     .navbar-toggler {
-      margin-top: 10px; 
+      margin-top: 1em; 
+    }
+
+    #div-izquierdo {
+        flex: 2; 
+        background-color: #ffffff; 
+        overflow-y: scroll;
+        height: 100vh;
+        max-height: 800px;
+        margin-left: 0em; 
+        text-align: center;
+        margin: 10px;
+    }
+    #ubicacion-btn{
+        margin-top: 1em;
+    }
+    #navbar-buttons{
+        margin-top: 1em;
+        margin-right: 0em;
+        font-family: 'Lato', sans-serif;
     }
   }
   
@@ -16,9 +42,30 @@
       flex-direction: row; 
       align-items: center; 
     }
-  
+    .h2 {
+        color: #47525E;
+        font-size: 2em; 
+        line-height: 1.2; 
+        font-weight: 700;
+        margin-right: 2em;
+        width: 80%; 
+    }
     .navbar-toggler {
       margin-top: 0; 
+    }
+
+    #div-izquierdo {
+        flex: 1.25; 
+        background-color: #ffffff; 
+        overflow-y: scroll;
+        height: 100vh;
+        max-height: 800px; 
+        margin-left: 2em;
+    }
+
+    #navbar-buttons{
+        margin-right: 2em;
+        font-family: 'Lato', sans-serif;
     }
   }
   
@@ -38,10 +85,7 @@
     align-items: left !important;
 }
 
-#navbar-buttons{
-    margin-right: 2em;
-    font-family: 'Lato', sans-serif;
-}
+
 
 .navbar-nav .nav-item {
     display: flex;
@@ -70,14 +114,11 @@ main {
     font-family: 'Lato', sans-serif;
 }
 
-.h2 {
-    color: #47525E;
-    font-size: 2em; 
-    line-height: 1.2; 
-    font-weight: 700;
-    margin-right: 2em;
-    width: 80%; 
+.leaflet-popup-content{
+    font-family: 'Lato', sans-serif;
+    font-size: 1.5em;
 }
+
 
 .h2-centrado {
     color: #47525E;
@@ -118,8 +159,6 @@ main {
 
 .ilustracion{
     width: 80%;
-    padding: 4em;
-
 }
 
 
@@ -129,14 +168,6 @@ main {
     height: 80vh; 
 }
 
-
-#div-izquierdo {
-    flex: 1; 
-    background-color: #ffffff; 
-    overflow-y: scroll;
-    max-height: 700px;
-    margin-left: 2em;
-}
 
 #div-derecho {
     flex: 2; 
@@ -179,4 +210,52 @@ main {
 
 .bi-flag-fill{
     color: black;
+}
+
+#toggle-left-panel {
+    position: absolute;
+    bottom: 0; 
+    left: 0; 
+    z-index: 1000; 
+}
+
+.form-select{
+    width: 80%;
+    
+}
+
+.badge.badge-success {
+    background-color: #28a745; 
+    color: #fff; 
+}
+
+
+.badge.badge-danger {
+    background-color: #dc3545; 
+    color: #fff; 
+}
+
+/* Para informacion */
+
+.legend-color {
+    width: 20px; 
+    height: 20px; 
+    display: inline-block;
+    margin-right: 10px; 
+}
+
+.red {
+    background-color: red;
+}
+
+.orange {
+    background-color: orange;
+}
+
+.green {
+    background-color: green;
+}
+
+.blue {
+    background-color: blue;
 }

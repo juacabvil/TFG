@@ -10,17 +10,17 @@
         <!-- Columna 1 -->
         <div class="col-md-6 d-flex flex-column align-items-center">
 
-            <img id="logo" src="{% static '/images/simbolo.png'%}" alt="Logo" class="d-inline-block align-text-top"></img>
+            <img id="logo" src="{% static '/images/simbolo.png'%}" alt="Logo" title="Logo" class="d-inline-block align-text-top"></img>
             <br>
             
-                <a href="/buscas"type="button" class="btn btn-danger custom-button">Ir al mapa</a>
+                <a href="/buscas"type="button" class="btn btn-danger custom-button">Adelante</a>
             
             <br>
             
         </div>
         <!-- Columna 2 -->
         <div class="col-md-6 d-flex flex-column ">
-            <img id="mapa" src="{% static '/images/Raster.png'%}" alt="Logo" class="d-inline-block align-text-top"></img>
+            <img id="mapa" src="{% static '/images/Raster.png'%}" alt="Mapa vacío" title="Mapa vacío" class="d-inline-block align-text-top"></img>
         </div>
 
         
@@ -38,7 +38,7 @@
 
         <!-- Columna 4 -->
         <div class="col-md-5 d-flex flex-column ">
-            <img src="{% static '/images/ilustracion_1.png'%}" alt="Logo" class="ilustracion"></img>
+            <img src="{% static '/images/ilustracion_1.png'%}" alt="Ilustración de una persona en silla de ruedas con una niña en brazos" title="Ilustración de una persona en silla de ruedas con una niña en brazos" class="ilustracion"></img>
         </div>
 
         <!-- Columna 5 -->
@@ -68,7 +68,7 @@
         </div>
         <!-- Columna 7 -->
         <div class="col-md-5 d-flex flex-column ">
-            <img src="{% static '/images/ilustracion_2.png'%}" alt="Logo" class="ilustracion"></img>
+            <img src="{% static '/images/ilustracion_2.png'%}" alt="Ilustración de varias personas, una con una pierna protésica, otra en silla de ruedas y una ciega de buen ánimo" title="Ilustración de varias personas con dificultad en la movilidad de buen ánimo" class="ilustracion"></img>
         </div>
 
         
@@ -76,17 +76,13 @@
 </div>
 
 <script>
-    // Agrega un evento clic a los enlaces con la clase "scroll-link"
+    
     document.querySelectorAll('.scroll-link').forEach(function (element) {
         element.addEventListener('click', function (e) {
-            e.preventDefault(); // Evita que se produzca el comportamiento predeterminado del enlace
-
-            const targetId = this.getAttribute('href').substring(1); // Obtiene el ID del objetivo
-
-            const targetElement = document.getElementById(targetId); // Obtiene el elemento de destino
-
+            e.preventDefault(); 
+            const targetId = this.getAttribute('href').substring(1); 
+            const targetElement = document.getElementById(targetId); 
             if (targetElement) {
-                // Desplaza la página hasta el elemento de destino con una animación suave
                 window.scrollTo({
                     top: targetElement.offsetTop,
                     behavior: 'smooth'

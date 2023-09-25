@@ -1,6 +1,6 @@
 from django import forms
 from django.contrib.auth.password_validation import validate_password
-from .models import CustomUser
+from .models import CustomUser, PuntoUsuario
 from django.contrib.auth import login  
 
 
@@ -17,6 +17,12 @@ class RegistroForm(forms.ModelForm):
     class Meta:
         model = CustomUser
         fields = ['email', 'first_name', 'family_name', 'second_family_name']
+        labels = {
+            'email': 'Correo Electrónico',
+            'first_name': 'Nombre',
+            'family_name': 'Primer apellido',
+            'second_family_name': 'Segundo apellido',
+        }
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
@@ -72,3 +78,8 @@ class InicioSesionForm(forms.Form):
         label='Contraseña',
         widget=forms.PasswordInput(attrs={'class': 'form-control'}),
     )
+    
+
+
+
+        

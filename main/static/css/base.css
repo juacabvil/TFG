@@ -2,7 +2,7 @@
 /* Alinea el logotipo y el botón de desplegar cuando el espacio es limitado */
 @media (max-width: 991.98px) {
     .navbar-header {
-      flex-direction: column; /* Coloca los elementos en columna */
+       /* Coloca los elementos en columna */
       align-items: center; /* Alinea los elementos a la izquierda */
     }
   
@@ -22,6 +22,8 @@
       margin-top: 0; /* Elimina el margen superior */
     }
   }
+
+  
   
 #sevidis-text {
     color: #9A182D;
@@ -118,8 +120,3 @@ main {
 
 }
 
-.ilustracion{
-    width: 80%;
-    padding: 4em;
-
-}

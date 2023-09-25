@@ -1,4 +1,5 @@
 {% load static %}
+{% load pwa %}
 
 <!DOCTYPE html>
 <html lang="es">
@@ -7,6 +8,7 @@
     {% block scripts %}
     <!-- Local -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% progressive_web_app_meta %}
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -29,7 +31,9 @@
     <link rel="stylesheet" href="{% static 'css/leaflet.extra-markers.min.css' %}">
     <script src="{% static 'js/leaflet.extra-markers.min.js' %}"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <script src="https://code.responsivevoice.org/responsivevoice.js?key=Wrilessf"></script>
     
+    </script>
     {% endblock scripts %}
 
 
@@ -43,7 +47,7 @@
 
             <!-- Logotipo y botón de desplegar -->
             <div class="d-flex justify-content-between align-items-center w-100 navbar-header">
-                <a class="navbar-brand" href="/">
+                <a alt="Logo de la web, sirve para ir al inicio" title="Logo de la web"class="navbar-brand" href="/">
                     <div id="sevidis-text">
                         SeviDis
                     </div>
@@ -63,8 +67,9 @@
                           <a class="nav-link ">¡Hola, {{ user.first_name }}!</a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link" href="/logout">Cerrar sesión</a>
+                        <a class="nav-link" alt="Cerrar sesión" title="Cerrar sesión" href="/logout">Cerrar sesión</a>
                       </li>
+                      
                   </ul>     
 
                     
@@ -79,13 +84,13 @@
                   <!-- Elementos de la barra de navegación -->
                   <div class="collapse navbar-collapse" id="navbar-buttons">
                     <ul class="navbar-nav ml-auto">
-                        <li class="nav-item">
-                            <a class="nav-link" href="/">Inicio</a>
+                        <li alt="Ir al principio" title="Ir al panel de información" class="nav-item">
+                            <a class="nav-link"  href="/informacion">Información</a>
                         </li>
-                        <li class="nav-item">
+                        <li alt="Iniciar sesion" title="Iniciar sesion" class="nav-item">
                             <a class="nav-link " href="/inicio_sesion">Inicio de sesión</a>
                         </li>
-                        <li class="nav-item">
+                        <li alt="Registrarse" title="Registrarse" class="nav-item">
                             <a class="nav-link" href="/registro">Registro</a>
                         </li>
                     </ul>     
@@ -96,4 +101,9 @@
 
     <main>{% block body %}{% endblock %}</main>
 </body>
+
+<script>
+    responsiveVoice.setDefaultVoice("Spanish Female");
+
+</script>
 </html>

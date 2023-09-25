@@ -1,0 +1,95 @@
+{% extends 'base.html' %} 
+{% load static %}
+{% load bootstrap_icons %}
+
+{% block body %}
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            
+            <div class="card card-lg">
+                <div class="card-header">
+                    <p class="h2">Nuevo Punto de Interés</p>
+                </div>
+                <div class="card-body">
+                    <div class="mt-3 text-center">
+                        ¡Si tienes cualquier duda al introducir algun campo, consulta nuestro panel de <a href="{% url 'informacion' %}"> información</a>!
+                    </div>
+                        <form method="post" class="needs-validation" novalidate>
+                            {% csrf_token %}
+                            {% if errors %}
+                                <div class="alert alert-danger" role="alert">
+                                    Por favor, corrige los siguientes errores:
+                                    <ul>
+                                    {% for error in errors %}
+                                        <li>{{ error }}</li>
+                                    {% endfor %}
+                                    </ul>
+                                </div>
+                            {% endif %}
+                            
+                            <div class="mb-3">
+                                <label for="id_nombre" class="form-label h4">Nombre</label>
+                                <input type="text" id="id_nombre" name="nombre" class="form-control form-control-lg" placeholder="Ejemplo: Plaza de armas" value="{{ punto.nombre }}">
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label for="id_descripcion" class "form-label h4">Descripción</label>
+                                <textarea id="id_descripcion" name="descripcion" class="form-control form-control-lg" rows="3" placeholder="¡Cuenta como es el lugar! Habla sobre si hay escaleras y ascensores, si es espacioso...">{{ punto.descripcion }}</textarea>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="id_color_accesibilidad" class="form-label h4">Nivel de accesibilidad</label>
+                                <select id="id_color_accesibilidad" name="color_accesibilidad" class="form-select form-select-lg">
+                                    <option value="red" {% if punto.color_accesibilidad == 'red' %} selected {% endif %}>No accesible (🔴 Rojo, No es posible acceder con silla de ruedas)</option>
+                                    <option value="orange" {% if punto.color_accesibilidad == 'orange' %} selected {% endif %}>Limitado (🟠 Naranja, Existen escalones de no más de 7cm en el camino)</option>
+                                    <option value="green" {% if punto.color_accesibilidad == 'green' %} selected {% endif %}>Accesible (🟢 Verde, Se puede acceder a todas las salas sin obstáculos)</option>
+                                    <option value="blue" {% if punto.color_accesibilidad == 'blue' %} selected {% endif %}>Designado (🔵 Azul, Creado para personas sin movilidad)</option>
+                                </select>
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label for="id_amenidad" class="form-label h4">Categoría</label>
+                                <select id="id_amenidad" name="amenidad" class="form-select form-select-lg">
+                                    <option value="Desconocida" {% if punto.amenidad == 'Desconocida' %} selected {% endif %}>Desconocida (❓)</option>
+                                    <option value="Comida" {% if punto.amenidad == 'Comida' %} selected {% endif %}>Comida (🍽️)</option>
+                                    <option value="Entretenimiento" {% if punto.amenidad == 'Entretenimiento' %} selected {% endif %}>Entretenimiento (🎥)</option>
+                                    <option value="Servicios Financieros" {% if punto.amenidad == 'Servicios Financieros' %} selected {% endif %}>Servicios Financieros (🏦)</option>
+                                    <option value="Bebidas" {% if punto.amenidad == 'Bebidas' %} selected {% endif %}>Bebidas (🥤)</option>
+                                    <option value="Salud" {% if punto.amenidad == 'Salud' %} selected {% endif %}>Salud (🏥)</option>
+                                    <option value="Educación" {% if punto.amenidad == 'Educación' %} selected {% endif %}>Educación (📚)</option>
+                                    <option value="Cultura y Arte" {% if punto.amenidad == 'Cultura y Arte' %} selected {% endif %}>Cultura y Arte (🎨)</option>
+                                    <option value="Servicios Públicos" {% if punto.amenidad == 'Servicios Públicos' %} selected {% endif %}>Servicios Públicos (📮)</option>
+                                    <option value="Transporte" {% if punto.amenidad == 'Transporte' %} selected {% endif %}>Transporte (🚲)</option>
+                                    <option value="Otros" {% if punto.amenidad == 'Otros' %} selected {% endif %}>Otros (❓)</option>
+                                    <option value="Baños" {% if punto.amenidad == 'Baños' %} selected {% endif %}>Baños (🚽)</option>
+                                    <option value="Fuel" {% if punto.amenidad == 'Fuel' %} selected {% endif %}>Fuel (⛽)</option>
+                                </select>
+                            </div>
+                            
+                            
+                            <div class="mb-3 form-check">
+                                <input type="checkbox" id="id_wcAdaptado" name="wcAdaptado" class="form-check-input form-check-input-lg" {% if punto.wcAdaptado %} checked {% endif %}>
+                                <label class="form-check-label h4" for="id_wcAdaptado">Baño Adaptado</label>
+                            </div>
+                            
+                            <div class="mb-3 form-check">
+                                <input type="checkbox" id="id_AnimalesGuia" name="AnimalesGuia" class="form-check-input form-check-input-lg" {% if punto.AnimalesGuia %} checked {% endif %}>
+                                <label class="form-check-label h4" for="id_AnimalesGuia">Animales de Guía</label>
+                            </div>
+                            
+                            <div class="mb-3 form-check">
+                                <input type="checkbox" id="id_Asistencia" name="Asistencia" class="form-check-input form-check-input-lg" {% if punto.Asistencia %} checked {% endif %}>
+                                <label class="form-check-label h4" for="id_Asistencia">Asistencia</label>
+                            </div>
+
+                            <button type="submit" class="btn btn-danger btn-lg">Guardar</button>
+                        </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

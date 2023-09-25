@@ -1,6 +1,7 @@
 {% extends 'base.html' %} 
 {% load static %}
 {% block body %} 
+{% load bootstrap_icons %}
 
 <br>
 <p class="h2-centrado"> ¿Que buscas? </p>
@@ -9,19 +10,20 @@
     <div class="row no-gutters">
         <!-- Columna 1 -->
         <div class="col-md-6 d-flex flex-column align-items-center">
+            {% bs_icon 'pin-map-fill' size='10em' %}
             <br>
             
                 <a href="/mapa"type="button" class="btn btn-danger custom-button">Ir al mapa</a>
             
             <br>
+
             
         </div>
         <!-- Columna 2 -->
         <div class="col-md-6 d-flex flex-column align-items-center">
+            {% bs_icon 'book' size='10em' %}
             <br>
-            
-                <button type="button" class="btn btn-danger custom-button">Información</button>
-            
+            <a href="/informacion"type="button" class="btn btn-danger custom-button">Informacion</a>
             <br>
             
         </div>
@@ -30,17 +32,12 @@
 </div>
 
 <script>
-    // Agrega un evento clic a los enlaces con la clase "scroll-link"
     document.querySelectorAll('.scroll-link').forEach(function (element) {
         element.addEventListener('click', function (e) {
-            e.preventDefault(); // Evita que se produzca el comportamiento predeterminado del enlace
-
-            const targetId = this.getAttribute('href').substring(1); // Obtiene el ID del objetivo
-
-            const targetElement = document.getElementById(targetId); // Obtiene el elemento de destino
-
+            e.preventDefault(); 
+            const targetId = this.getAttribute('href').substring(1); 
+            const targetElement = document.getElementById(targetId); 
             if (targetElement) {
-                // Desplaza la página hasta el elemento de destino con una animación suave
                 window.scrollTo({
                     top: targetElement.offsetTop,
                     behavior: 'smooth'

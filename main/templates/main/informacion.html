@@ -1,0 +1,210 @@
+{% extends 'base.html' %} 
+{% load static %}
+{% block body %} 
+{% load bootstrap_icons %}
+
+<div class="container mt-4">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card mb-4">
+                <div class="card-body">
+                    <p class="h2">¿Para qué sirve esta aplicación?</p>
+                    <img src="{% static '/images/tutorial/captura.PNG'%}" class="ilustracion"></img>
+                    </br></br>
+                    <p class="card-text">
+                        Esta aplicación es un mapa interactivo que te permite trazar rutas en distintos modos de transporte, además de consultar y proporcionar información sobre la accesibilidad de puntos de interés tanto del sistema como introducidos por usuarios.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        
+
+        <div class="col-md-6">
+            <div class="card mb-4">
+                <div class="card-body">
+                    <p class="h2">Leyenda de Accesibilidad</p>
+                    <p class="card-text">
+                        La aplicación utiliza una variedad de símbolos y colores para facilitar una rápida interpretación de la accesibilidad. Aquí están los significados de los colores:
+
+                        <ul class="legend-list">
+                            <li>
+                                <div class="legend-color red"></div>
+                                Rojo: Baja accesibilidad. Se requiere asistencia para acceder a la mayoría de las áreas.
+                            </li>
+                            <li>
+                                <div class="legend-color orange"></div>
+                                Naranja: Accesibilidad limitada. Presencia de escaleras con escalones inferiores a 7 cm. Algunas áreas pueden requerir asistencia.
+                            </li>
+                            <li>
+                                <div class="legend-color green"></div>
+                                Verde: Buena accesibilidad. Acceso sin obstáculos a todas las áreas.
+                            </li>
+                            <li>
+                                <div class="legend-color blue"></div>
+                                Azul: Accesible para personas con movilidad reducida.
+                            </li>
+                        </ul>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="card mb-4">
+    
+                <div class="card-body">
+                    <p class="h2">Leyenda de Categorías</p>
+                    <p class="card-text">
+                        Aquí tienes los símbolos que representan categorías de lugares:
+
+                        <ul class="legend-list">
+                            <li>
+                                {% bs_icon 'cup-hot' size='1.5em' %}
+                                Comida: Restaurantes, cafés, comida rápida, heladerías, etc.
+                            </li>
+                            <li>
+                                {% bs_icon 'film' size='1.5em' %}
+                                Entretenimiento: Teatros y cines.
+                            </li>
+                            <li>
+                                {% bs_icon 'bank' size='1.5em' %}
+                                Servicios Financieros: Bancos y cajeros automáticos.
+                            </li>
+                            <li>
+                                {% bs_icon 'cup-straw' size='1.5em' %}
+                                Bebidas: Bares, pubs y fuentes públicas.
+                            </li>
+                            <li>
+                                {% bs_icon 'hospital' size='1.5em' %}
+                                Salud: Farmacias, hospitales, clínicas, dentistas, veterinarios, etc.
+                            </li>
+                            <li>
+                                {% bs_icon 'book' size='1.5em' %}
+                                Educación: Colegios, guarderías, escuelas de idiomas, etc.
+                            </li>
+                            <li>
+                                {% bs_icon 'brush' size='1.5em' %}
+                                Cultura y Arte: Museos y bibliotecas.
+                            </li>
+                            <li>
+                                {% bs_icon 'postcard' size='1.5em' %}
+                                Servicios Públicos: Estaciones de policía, oficinas de correos, iglesias, ayuntamientos, etc.
+                            </li>
+                            <li>
+                                {% bs_icon 'bicycle' size='1.5em' %}
+                                Transporte: Estaciones de alquiler de bicicletas, de alquiler de coches, lavado de coches, etc.
+                            </li>
+                            <li>
+                                {% bs_icon 'question' size='1.5em' %}
+                                Otros: Categorías no clasificadas como teléfonos y cuidado de niños.
+                            </li>
+                            <li>
+                                {% bs_icon 'badge-wc' size='1.5em' %}
+                                Baños: Baños públicos.
+                            </li>
+                            <li>
+                                {% bs_icon 'fuel-pump' size='1.5em' %}
+                                Fuel: Gasolineras.
+                            </li>
+                            <li>
+                                {% bs_icon 'question' size='1.5em' %}
+                                Desconocida.
+                            </li>
+                        </ul>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card mb-4">
+                <div class="card-body">
+                    <p class="h2">Rutas</h2>
+                    <p class="card-text">
+                        Las rutas se encuentran en version EXPERIMENTAL, ten siempre un ojo en el entorno.
+
+                        Las rutas van desde la bandera blanca 
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-flag" viewBox="0 0 16 16">
+                        <path d="M14.778.085A.5.5 0 0 1 15 .5V8a.5.5 0 0 1-.314.464L14.5 8l.186.464-.003.001-.006.003-.023.009a12.435 12.435 0 0 1-.397.15c-.264.095-.631.223-1.047.35-.816.252-1.879.523-2.71.523-.847 0-1.548-.28-2.158-.525l-.028-.01C7.68 8.71 7.14 8.5 6.5 8.5c-.7 0-1.638.23-2.437.477A19.626 19.626 0 0 0 3 9.342V15.5a.5.5 0 0 1-1 0V.5a.5.5 0 0 1 1 0v.282c.226-.079.496-.17.79-.26C4.606.272 5.67 0 6.5 0c.84 0 1.524.277 2.121.519l.043.018C9.286.788 9.828 1 10.5 1c.7 0 1.638-.23 2.437-.477a19.587 19.587 0 0 0 1.349-.476l.019-.007.004-.002h.001M14 1.221c-.22.078-.48.167-.766.255-.81.252-1.872.523-2.734.523-.886 0-1.592-.286-2.203-.534l-.008-.003C7.662 1.21 7.139 1 6.5 1c-.669 0-1.606.229-2.415.478A21.294 21.294 0 0 0 3 1.845v6.433c.22-.078.48-.167.766-.255C4.576 7.77 5.638 7.5 6.5 7.5c.847 0 1.548.28 2.158.525l.028.01C9.32 8.29 9.86 8.5 10.5 8.5c.668 0 1.606-.229 2.415-.478A21.317 21.317 0 0 0 14 7.655V1.222z"/>
+                    </svg>
+                    hasta la bandera negra
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-flag-fill" viewBox="0 0 16 16">
+                        <path d="M14.778.085A.5.5 0 0 1 15 .5V8a.5.5 0 0 1-.314.464L14.5 8l.186.464-.003.001-.006.003-.023.009a12.435 12.435 0 0 1-.397.15c-.264.095-.631.223-1.047.35-.816.252-1.879.523-2.71.523-.847 0-1.548-.28-2.158-.525l-.028-.01C7.68 8.71 7.14 8.5 6.5 8.5c-.7 0-1.638.23-2.437.477A19.626 19.626 0 0 0 3 9.342V15.5a.5.5 0 0 1-1 0V.5a.5.5 0 0 1 1 0v.282c.226-.079.496-.17.79-.26C4.606.272 5.67 0 6.5 0c.84 0 1.524.277 2.121.519l.043.018C9.286.788 9.828 1 10.5 1c.7 0 1.638-.23 2.437-.477a19.587 19.587 0 0 0 1.349-.476l.019-.007.004-.002h.001"/>
+                      </svg></br>
+                    Por defecto, el camino se calcula a pie. 
+                    Sin embargo, esta ruta podría incluir escalones en el camino, por lo que para usuarios de silla de ruedas se recomienda el uso de la categoría "sobre ruedas" que usará rutas con carriles bici. 
+                    En Sevilla, los usuarios de sillas de ruedas pueden usar este carril con total normalidad para desplazarse y evitar obstáculos. Aunque a pesar de todo si el sistema lo considera necesario incluirá escaleras en casos particulares donde dar el rodeo sea considerado demasiado poco optimo. Esta decisión es ajena a nosotros. </br> </br>
+                    Las rutas en coche tienen una característica especial, y es que si se elige un destino a menos de 500m de una plaza para discapacitados del sistema, la ruta calculará automáticamente eligiendo este destino y sugiriendo una segunda ruta desde el aparcamiento al destino inicial</br>
+                    Al trazar una ruta, con el boton inferior "Mostrar direcciones" aparecerán datos asociados a la ruta como la distancia y las indicaciones a completar para llegar al destino.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="card mb-4">
+                <div class="card-body">
+                    <p class="h2">Marcadores</p>
+                    <p class="card-text">
+                        Al pulsar en un marcador, este mostrará información asociada. 
+                        Esta información irá desde el nombre del lugar, a la categoría, descripcion y otras etiquetas circunstanciales dependiendo de la categoría. Los marcadores del sistema lamentablemente aún tienen las etiquetas en inglés.</br>
+                        Al pulsar en un marcador, en el menú izquierdo, abajo, apareceran sus opiniones asociadas. Si se inicia sesión será posible añadir una opinión. Si se vuelve a enviar una opinion al mismo punto esta se sobreescribirá.</br>
+                        Si el marcador es nuestro, entonces podremos editarlo o eliminarlo.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="card mb-4">
+                <div class="card-body">
+                    <p class="h2">Menú contextual</p>
+                    <p class="card-text">
+                        Al hacer click derecho o en el caso de un dispositivo móvil, dejar pulsado el mapa aparecerá un menú con varias opciones relacionadas con la ubicacion pulsada.</br>
+                        <li>
+                            Establecer inicio de la ruta en el lugar. Elegir esta opción hará que el origen ahora sea ese punto y se recalcule la ruta.
+                        </li>
+                        <li>
+                            Establecer final de la ruta en el lugar. Elegir esta opción hará que el destino ahora sea ese punto y se recalcule la ruta.
+                        </li>
+                        <li>
+                            Encontrar puntos en la zona. Esta opción mostrará datos de OpenStreetMaps en un radio de 100m de la zona elegida. Lamentablemente estos datos serán en su mayoria en inglés.
+                        </li>
+                        <li>
+                            Añadir punto. Esta opción requiere autenticación. En un rapido cuestionario se podrá añadir un nuevo punto al sistema. Debido al bajo poblado se aceptarán todos los puntos en esta primera fase.
+                        </li>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card mb-4">
+                <div class="card-body">
+                    <p class="h2">Reproductor de sonido</p>
+                    </br></br>
+                    <p class="card-text">
+                        La página incorpora un reproductor de sonido externo, <a href="https://responsivevoice.org/faq/">ResponsiveVoice</a>. A veces causa problemas que pueden arreglarse recargando la página, o en su defecto haciendo una recarga completa (Borrando caché).
+                        Puede recargar haciendo click en el icono de la flecha en forma de circulo en la parte superior o pulsando F5 de manera habitual. Si necesita hacer la recarga completa puede hacer presionando el icono a la vez que la tecla Ctrl, o control. También pulsando Ctrl y F5 a la vez
+
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card mb-4">
+                <div class="card-body">
+                    <p class="h2">Información y protección de datos</p>
+                    </br></br>
+                    <p class="card-text">
+                        Aquí puedes consultar todo respecto a la gestión de protección de datos <a href="{% url 'gdpr' %}">aquí</a>. 
+
+                    </p>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</div>
+
+
+{% endblock body %} 

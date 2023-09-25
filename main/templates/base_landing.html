@@ -1,7 +1,8 @@
 {% load static %}
+{% load pwa %}
 
 <!DOCTYPE html>
-<html lang='es'>
+<html lang="es">
   <head>
     <title>Sevidis</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -11,6 +12,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{% static 'css/base.css' %}" />
     <link rel="shortcut icon" href="{% static '/images/favicon.png' %}">
+    <script src="https://code.responsivevoice.org/responsivevoice.js?key=Wrilessf"></script>
+    {% progressive_web_app_meta %}
   </head>
 
   <body>
@@ -45,7 +48,7 @@
                     <a class="nav-link scroll-link" href="#sobre-nosotros">Sobre nosotros</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#ir">Ir</a>
+                    <a class="nav-link" href="/informacion">Información</a>
                 </li>
             </ul>            
           </div>
@@ -56,4 +59,8 @@
 
     
   </body>
+
+<script>
+    responsiveVoice.setDefaultVoice("Spanish Female");
+</script>
 </html>

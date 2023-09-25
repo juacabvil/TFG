@@ -42,7 +42,7 @@ class PuntoDeInteres(models.Model):
     tipo_amenidad = models.CharField(max_length=100, default='Desconocido')
     latitud = models.FloatField()
     longitud = models.FloatField()
-    descripcion = models.TextField()
+    descripcion = models.TextField(max_length=2000)
     datos_adicionales = models.JSONField(null=True, blank=True)
     accesibilidad = models.CharField(
     max_length=10, 
@@ -56,7 +56,8 @@ class PuntoDeInteres(models.Model):
 )
     
 
-
+    
+        
     def __str__(self):
         return self.nombre
     
@@ -112,7 +113,77 @@ class PuntoDeInteres(models.Model):
             "Desconocida": "bi bi-question",  
         }
         return iconos_categoria.get(categoria_amenidad, "bi bi-question")  
-        
+
+
+class PuntoUsuario(models.Model):
+    nombre = models.CharField(max_length=100, default='Desconocido')
+    descripcion = models.TextField(default='Desconocida')
+    user = models.ForeignKey(CustomUser, on_delete=models.CASCADE, default=None, null=True)
+    latitud = models.FloatField()
+    longitud = models.FloatField()
+    
+    class Meta:
+        unique_together = ['latitud', 'longitud']
+
+    CATEGORIAS_AMENIDAD_CHOICES = [
+        ('Comida', 'Comida'),
+        ('Entretenimiento', 'Entretenimiento'),
+        ('Servicios Financieros', 'Servicios Financieros'),
+        ('Bebidas', 'Bebidas'),
+        ('Salud', 'Salud'),
+        ('Educación', 'Educación'),
+        ('Cultura y Arte', 'Cultura y Arte'),
+        ('Servicios Públicos', 'Servicios Públicos'),
+        ('Transporte', 'Transporte'),
+        ('Otros', 'Otros'),
+        ('Baños', 'Baños'),
+        ('Fuel', 'Fuel'),
+        ('Desconocida', 'Desconocida'),
+    ]
+
+    amenidad = models.CharField(
+        max_length=100,
+        choices=CATEGORIAS_AMENIDAD_CHOICES,
+        default='Desconocida',
+    )
+
+    COLOR_CHOICES = [
+        ('red', 'red'),
+        ('orange', 'orange'),
+        ('green', 'green'),
+        ('blue', 'blue'),
+    ]
+
+    color_accesibilidad = models.CharField(
+        max_length=10,
+        choices=COLOR_CHOICES,
+        default='red',
+    )
+
+    wcAdaptado = models.BooleanField(default=False)
+    AnimalesGuia = models.BooleanField(default=False)
+    Asistencia = models.BooleanField(default=False)
+
+    def __str__(self):
+        return f"Punto de Usuario: {self.nombre}"
+
+    def get_marker_icon(self):
+        iconos_categoria = {
+            "Comida": "bi bi-cup-hot",
+            "Entretenimiento": "bi bi-film",
+            "Servicios Financieros": "bi bi-bank",
+            "Bebidas": "bi bi-cup-straw",
+            "Salud": "bi bi-hospital",
+            "Educación": "bi bi-book",
+            "Cultura y Arte": "bi bi-brush",
+            "Servicios Públicos": "bi bi-postcard",
+            "Transporte": "bi bi-bicycle",
+            "Otros": "bi bi-question",
+            "Baños": "bi bi-badge-wc",
+            "Fuel": "bi bi-fuel-pump",
+            "Desconocida": "bi bi-question",
+        }
+        return iconos_categoria.get(self.amenidad, "bi bi-question")      
     
 class Aparcamiento(models.Model):
     nombre = models.CharField(max_length=255)
@@ -122,5 +193,16 @@ class Aparcamiento(models.Model):
 
     def __str__(self):
         return self.nombre
+    
+class Opinion(models.Model):
+    usuario = models.ForeignKey('CustomUser', on_delete=models.CASCADE)
+    texto = models.TextField()
+    punto_interes = models.ForeignKey('PuntoDeInteres', on_delete=models.CASCADE, null=True, blank=True)
+    punto_usuario = models.ForeignKey('PuntoUsuario', on_delete=models.CASCADE, null=True, blank=True)
+    aparcamiento = models.ForeignKey('Aparcamiento', on_delete=models.CASCADE, null=True, blank=True)
+
+
+    def __str__(self):
+        return f"Opinión de {self.usuario} en {self.punto_interes or self.punto_usuario or self.aparcamiento}"
     
     

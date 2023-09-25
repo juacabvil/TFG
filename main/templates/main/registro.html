@@ -10,9 +10,12 @@
                     <form method="post">
                         {% csrf_token %}
                         {{ form.as_p }}
-                        <button type="submit" class="btn btn-primary">Registrarse</button>
+                        <button type="submit" class="btn btn-danger">Registrarse</button>
                     </form>
                 </div>
+            </div>
+            <div class="mt-3 text-center">
+                ¡Recuerda que al registrarte aceptas nuestra <a href="{% url 'gdpr' %}">política de privacidad</a>!
             </div>
             <div class="mt-3 text-center">
                 ¿Ya tienes una cuenta? <a href="{% url 'inicio_sesion' %}">Iniciar sesión</a>
