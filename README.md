@@ -1,5 +1,6 @@
 # Sevidis: una aplicación multi-plataforma para la ayuda de personas con discapacidad en Sevilla
 
+![image](https://github.com/juacabvil/TFG/assets/73932871/ef2cdae2-c397-4909-a625-ccde9a4a1ace)
 
 
 ## Descripción del proyecto
