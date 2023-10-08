@@ -27,6 +27,32 @@ El proyecto integra funcionalidades de las siguientes herramientas:
 - Bootstrap: un framework CSS para diseñar sitios web responsivos y adaptables.
 - Leaflet Extra Markers: una extensión de Leaflet para añadir marcadores personalizados.
 
+# ¿Como arrancar?
+
+## Con python 3.10 en Windows o Linux:
+
+### Entorno virtual
+
+- python -m venv .	(Para crear un entorno virtual en el directorio local)
+
+- .\Scripts\activate.bat	(En Windows, para arrancar el entorno virtual)
+
+- source venv/bin/activate (En Linux, para arrancar el entorno virtual)
+
+### Dependencias y arranque
+
+- pip install  -r  .\requirements.txt	(Usamos el comando para descargar las dependencias)
+
+- python.exe .\manage.py runserver	(Para arrancar la aplicación localmente)
+
+## Con Docker:
+
+- docker pull juacabvil/sevidis:1.0.0
+
+- docker run -p 8000:8000 juacabvil/sevidis:1.0.0
+
+Acceder a localhost:8000
+
 ## Créditos
 
 Este proyecto no es propietario ni responsable del contenido o funcionamiento de las herramientas mencionadas anteriormente. Todos los créditos y derechos pertenecen a sus respectivos autores.
